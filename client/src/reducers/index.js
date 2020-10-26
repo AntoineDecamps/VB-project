@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
+import burgerMenu from './burgerMenu';
 
 export default combineReducers({
-  counter,
+  burgerMenu,
 });

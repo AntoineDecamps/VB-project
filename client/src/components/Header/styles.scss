@@ -1,1 +1,17 @@
 @use 'src/styles/vars';
+
+.header {
+  height: 80px;
+  background-color: #242526;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  &__mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__logo {
+    max-width: 60px;
+  }
+}
