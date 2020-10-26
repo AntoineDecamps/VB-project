@@ -59,6 +59,7 @@
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
+    "react-responsive": "^8.1.0",
     "redux": "*",
     "styled-components": "*"
   }
