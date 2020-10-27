@@ -12,17 +12,17 @@ const Header = () => {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 1824px)' });
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
   return (
-    <div className="header">
+    <header className="header">
       {isBigScreen && (
         <p>DESKTOP</p>
       )}
       {isTabletOrMobile && (
-        <div className="header__mobile">
+        <nav className="header__mobile">
           <BurgerMenu />
           <img src={logo} className="header__logo" alt="logo" />
-        </div>
+        </nav>
       )}
-    </div>
+    </header>
   );
 };
 
