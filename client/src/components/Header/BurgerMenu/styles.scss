@@ -1,1 +1,9 @@
 @use 'src/styles/vars';
+
+.burgerMenu {
+  display: flex;
+  align-items: center;
+  &__text {
+    text-transform: uppercase;
+  }
+}

@@ -7,3 +7,10 @@
 .app img {
   max-width: 150px;
 } */
+
+.app {
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  margin: 0;
+}
