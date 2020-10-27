@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.dropdownSubCategories {
+  &__text {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    
+  }
+  &__presentation {
+    display: flex;
+    margin: 1rem 0 1rem 4rem;
+    padding: 1rem;
+  }
+}
