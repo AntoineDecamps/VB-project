@@ -15,8 +15,9 @@
 
 @media(min-width: 1024px) {
   .dropdown {
-    max-width: 400px;
+    width: 300px;
     position: absolute;
+    z-index: 1;
 
   }
   .dropdownSubCategories {

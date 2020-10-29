@@ -1,0 +1,31 @@
+@use 'src/styles/vars';
+
+/* mobile version */
+@media (max-width: 375px) {
+  .identity {
+    margin-top: 4rem;
+    &__title {
+      font-weight: normal;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin: 0 auto;
+      padding: 0.2rem 1.5rem;
+      font-family: 'MirageRegular', sans-serif;
+    }
+    &__article {
+      border: 1px solid black;
+      margin: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      &__text {
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      &__image {
+        width: 100%;
+        height: 230px;
+      }
+    }
+  }
+}

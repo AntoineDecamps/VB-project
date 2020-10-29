@@ -7,10 +7,14 @@
 
 
 // or you can import your own font
-// @font-face {
-//   font-family: 'Montserrat';
-//   src: url('../assets/fonts/Montserrat-Regular.ttf');
-// }
+@font-face {
+  font-family: 'MirageThin';
+  src: url('../assets/fonts/MirageThin.woff');
+}
+@font-face {
+  font-family: 'MirageRegular';
+  src: url('../assets/fonts/MirageRegular.woff');
+}
 // body {
 //   font-family: 'Montserrat', sans-serif;
 // }

@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+/* mobile version */
+@media (max-width: 375px) {
+  .expertise {
+    margin-top: 8rem;
+    &__title {
+      font-weight: normal;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin: 0 auto;
+      padding: 0.2rem 1.5rem;
+      font-family: 'MirageRegular', sans-serif;
+      text-align: center;
+    }
+    &__text {
+      margin: 1rem 3rem;
+      text-align: center;
+    }
+    &__button {
+      text-align: center;
+      font-size: 1.5rem;
+      border: 1px solid black;
+      padding: 0.5rem;
+      width: 65%;
+      margin: auto;
+      color: vars.$main-color;
+      background-color: vars.$secondary-color;
+    }
+  }
+}

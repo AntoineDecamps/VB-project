@@ -55,10 +55,13 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
+    "react-parallax": "^3.1.2",
     "react-redux": "*",
+    "react-rellax": "^1.0.3",
     "react-responsive": "^8.1.0",
     "redux": "*",
     "semantic-ui-css": "^2.4.1",
