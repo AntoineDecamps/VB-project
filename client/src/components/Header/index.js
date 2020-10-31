@@ -10,10 +10,21 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 const Header = () => {
-  const isBigScreen = useMediaQuery({ query: '(min-width: 1024px)' });
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1025px)' });
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
   return (
     <header className="header">
+      {isTabletOrMobile && (
+        <nav className="header__mobile">
+          <BurgerMenu />
+          <img src={logo} className="header__logo" alt="logo" />
+          <div className="header__socialMedia">
+            <Icon name="instagram" />
+            <Icon name="facebook f" />
+            <Icon name="pinterest p" />
+          </div>
+        </nav>
+      )}
       {isBigScreen && (
         <nav className="header__desktop">
           <div className="header__desktop__firstSection">
@@ -36,17 +47,6 @@ const Header = () => {
                 <p className="header__desktop__contact__right">Me contacter</p>
               </div>
             </div>
-          </div>
-        </nav>
-      )}
-      {isTabletOrMobile && (
-        <nav className="header__mobile">
-          <BurgerMenu />
-          <img src={logo} className="header__logo" alt="logo" />
-          <div className="header__socialMedia">
-            <Icon name="instagram" />
-            <Icon name="facebook f" />
-            <Icon name="pinterest p" />
           </div>
         </nav>
       )}

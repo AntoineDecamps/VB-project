@@ -22,10 +22,12 @@ const Concept = () => (
         <img src={Logo} alt="logo" className="concept__logo" />
       </Parallax>
     </div>
+    <div className="concept__topLine" />
     <div className="concept__explanation">
-      <h3 className="concept__explanation__title">Une création sur-mesure</h3>
+      <h3 className="concept__explanation__title animated">Une création sur-mesure</h3>
       <p className="concept__explanation__text animate__animated animate__bounce">Nous réalisons en collaboration avec le client des pièces qui lui ressembleront au maximum et s'intégreront au mieux dans son habitat</p>
     </div>
+    <div className="concept__bottomLine" />
   </section>
 );
 
