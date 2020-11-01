@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { createRef, useEffect } from 'react';
 import Parallax from 'react-rellax';
 import 'animate.css/animate.css';
 
 import mainImage from 'src/components/HomePage/Concept/test.jpg';
 import Logo from 'src/assets/logo-white.png';
-import PropTypes from 'prop-types';
+import PropTypes, { checkPropTypes } from 'prop-types';
 
 import './styles.scss';
 
 const Concept = () => {
-  const animatedElement = document.querySelectorAll('concept__mainText');
+  const ref = createRef();
+  const addAnimationOnView = (entries) => {
+    console.log(entries[0]);
+    // console.log(entries[0].isIntersecting);
+    const targetElement = entries[0].target;
+    console.log(targetElement);
+    if (entries[0].isIntersecting) {
+      targetElement.classList.add('animated');
+    }
+    else {
+      targetElement.classList.remove('animated');
+    }
+  };
+  useEffect(() => {
+    const animatedElement = ref.current;
+    const observer = new IntersectionObserver(addAnimationOnView, {
+      threshold: 1,
+    });
+    observer.observe(animatedElement);
+  });
+
   return (
     <section className="concept">
       <Parallax speed={2}>
@@ -25,14 +45,13 @@ const Concept = () => {
         </Parallax>
       </div>
       <div className="concept__topLine" />
-      <div className="concept__explanation">
-        <h3 className="concept__explanation__title animated">Une création sur-mesure</h3>
+      <div className="concept__explanation" ref={ref}>
+        <h3 className="concept__explanation__title">Une création sur-mesure</h3>
         <p className="concept__explanation__text animate__animated animate__bounce">Nous réalisons en collaboration avec le client des pièces qui lui ressembleront au maximum et s'intégreront au mieux dans son habitat</p>
       </div>
       <div className="concept__bottomLine" />
     </section>
-  );
-};
+)};
 
 Concept.propTypes = {};
 
