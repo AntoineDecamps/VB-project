@@ -12,9 +12,9 @@ const Concept = () => {
   const ref = createRef();
   const addAnimationOnView = (entries) => {
     console.log(entries[0]);
-    // console.log(entries[0].isIntersecting);
+    console.log(entries[0].isIntersecting);
     const targetElement = entries[0].target;
-    console.log(targetElement);
+    // console.log(targetElement);
     if (entries[0].isIntersecting) {
       targetElement.classList.add('animated');
     }
@@ -25,7 +25,7 @@ const Concept = () => {
   useEffect(() => {
     const animatedElement = ref.current;
     const observer = new IntersectionObserver(addAnimationOnView, {
-      threshold: 1,
+      threshold: 0.1,
     });
     observer.observe(animatedElement);
   });
@@ -45,9 +45,11 @@ const Concept = () => {
         </Parallax>
       </div>
       <div className="concept__topLine" />
-      <div className="concept__explanation" ref={ref}>
-        <h3 className="concept__explanation__title">Une création sur-mesure</h3>
-        <p className="concept__explanation__text animate__animated animate__bounce">Nous réalisons en collaboration avec le client des pièces qui lui ressembleront au maximum et s'intégreront au mieux dans son habitat</p>
+      <div className="concept__explanation">
+        <div className="animation" ref={ref}>
+          <h3 className="concept__explanation__title">Une création sur-mesure</h3>
+          <p className="concept__explanation__text">Nous réalisons en collaboration avec le client des pièces qui lui ressembleront au maximum et s'intégreront au mieux dans son habitat</p>
+        </div>
       </div>
       <div className="concept__bottomLine" />
     </section>
