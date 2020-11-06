@@ -10,25 +10,25 @@ import './styles.scss';
 
 const Concept = () => {
   const ref = createRef();
-  const addAnimationOnView = (entries) => {
-    console.log(entries[0]);
-    console.log(entries[0].isIntersecting);
-    const targetElement = entries[0].target;
-    // console.log(targetElement);
-    if (entries[0].isIntersecting) {
-      targetElement.classList.add('animated');
-    }
-    else {
-      targetElement.classList.remove('animated');
-    }
-  };
-  useEffect(() => {
-    const animatedElement = ref.current;
-    const observer = new IntersectionObserver(addAnimationOnView, {
-      threshold: 0.1,
-    });
-    observer.observe(animatedElement);
-  });
+  // const addAnimationOnView = (entries) => {
+  //   console.log(entries[0]);
+  //   console.log(entries[0].isIntersecting);
+  //   const targetElement = entries[0].target;
+  //   // console.log(targetElement);
+  //   if (entries[0].isIntersecting) {
+  //     targetElement.classList.add('animated');
+  //   }
+  //   else {
+  //     targetElement.classList.remove('animated');
+  //   }
+  // };
+  // useEffect(() => {
+  //   const animatedElement = ref.current;
+  //   const observer = new IntersectionObserver(addAnimationOnView, {
+  //     threshold: 0.1,
+  //   });
+  //   observer.observe(animatedElement);
+  // });
 
   return (
     <section className="concept">

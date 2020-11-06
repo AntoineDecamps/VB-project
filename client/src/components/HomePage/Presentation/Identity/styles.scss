@@ -1,5 +1,10 @@
 @use 'src/styles/vars';
 
+.identity {
+  // height: 100vh;
+  // background-color: yellow;
+}
+
 /* mobile version */
 @media (max-width: 375px) {
   .identity {
@@ -21,10 +26,12 @@
       &__text {
         padding: 2rem 1rem;
         text-align: center;
+        font-size: 1.1rem;
       }
       &__image {
-        width: 100%;
+        width: 65%;
         height: 230px;
+        margin: auto;
       }
     }
   }

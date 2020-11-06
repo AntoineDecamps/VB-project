@@ -16,12 +16,14 @@ const Header = () => {
     <header className="header">
       {isTabletOrMobile && (
         <nav className="header__mobile">
-          <BurgerMenu />
+          <div className="header__burgerMenu">
+            <BurgerMenu />
+          </div>
           <img src={logo} className="header__logo" alt="logo" />
           <div className="header__socialMedia">
-            <Icon name="instagram" />
-            <Icon name="facebook f" />
-            <Icon name="pinterest p" />
+            <Icon name="instagram" size="large" />
+            <Icon name="facebook f" size="large" />
+            <Icon name="pinterest p" size="large" />
           </div>
         </nav>
       )}

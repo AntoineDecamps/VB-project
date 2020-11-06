@@ -1,4 +1,5 @@
 import React from 'react';
+import image from './philosophy.png';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
@@ -11,7 +12,7 @@ const Philosophy = () => (
         <p className="philosophy__article__text">
           Ma philosophie Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias unde officia distinctio reprehenderit ab quod nam delectus nobis deleniti dolores adipisci nemo aspernatur cum, et, sint voluptatem temporibus officiis.
         </p>
-        <img src="https://picsum.photos/200/300" alt="" className="philosophy__article__image" />
+        <img src={image} alt="" className="philosophy__article__image" />
       </article>
     </div>
   </div>
