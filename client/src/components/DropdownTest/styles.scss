@@ -1,23 +1,38 @@
+@use 'src/styles/vars';
 .dropdownTest {
-  // position: absolute;
-  // top: 75px;
-  width: 300px;
+  width: 100%;
   transition: width 500ms ease;
-  // transform: translateY(45%);
-  background-color:#242526;
-  padding: 1rem;
+  background-color: vars.$main-color;
   overflow: hidden;
   border-radius: 8px;
   transition: height 500ms ease;
+  padding: 0 1rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .dropdownItem__list {
-  color: #dadce1;
+  color: black;
   height: 50px;
   display: flex;
   align-items: center; 
-  padding: 0.5rem;
-  border-radius: 8px;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 1.5rem;
+  border-bottom: rgb(154, 161, 161) solid 1px;
+  margin-left: auto;
+  margin: auto;
+  text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  .dropdownItem__list {
+    font-size: 2rem;
+  }
+}
+.menu {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin: auto;
 }
 
 .dropdownItem__list:hover {
@@ -28,9 +43,10 @@
   margin-left: auto;
 }
 
-.menu-item {
-  margin-left: 1rem;
-}
+// .menu-item {
+//   margin-left: 1rem;
+//   margin: auto;
+// }
 
 .menu {
   width: 100%;

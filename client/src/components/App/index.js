@@ -3,7 +3,7 @@
 import React from 'react';
 import Header from 'src/components/Header';
 import DropDown from 'src/containers/Dropdown';
-import DropdownTest from 'src/components/DropdownTest';
+import DropdownTest from 'src/containers/DropdownTest';
 import HomePage from 'src/components/HomePage';
 import Footer from 'src/components/Footer';
 import 'semantic-ui-css/semantic.min.css';

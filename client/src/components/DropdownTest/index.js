@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+
 import { Icon } from 'semantic-ui-react';
 import { CSSTransition } from 'react-transition-group';
 
@@ -7,7 +9,7 @@ import './styles.scss';
 function DropdownItem(props) {
   return (
     <div className="dropdownItem__list">
-      <Icon name={props.icon} size="big" />
+      {/* <Icon name={props.icon} size="big" /> */}
       <li className="menu-item">{props.children}</li>
       <div className="right__icon">
         <Icon name={props.arrow} />
@@ -15,15 +17,26 @@ function DropdownItem(props) {
     </div>
   );
 }
-const DropdownTest = () => {
+const DropdownTest = ({ open }) => {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
   useEffect(() => {
+    if (open) {
+      gsap.fromTo(dropdownRef.current, {
+        height: 0,
+      }, {
+        height: 500,
+        delay: 0,
+        duration: 0.2,
+      });
+    }
+  }, [open]);
+  useEffect(() => {
     setMenuHeight(dropdownRef.current?.offsetHeight);
   }, []);
   function calcHeight(el) {
-    const height = el.offsetHeight + 20;
+    const height = el.offsetHeight;
     setMenuHeight(height);
   }
   return (
@@ -36,20 +49,20 @@ const DropdownTest = () => {
         onEnter={calcHeight}
       >
         <div className="menu">
-          <DropdownItem icon="home">Accueil</DropdownItem>
-          <DropdownItem icon="address card">Contact</DropdownItem>
-          <div className="test" onClick={() => setActiveMenu("meubles")}>
-            <DropdownItem icon="box" arrow="angle right">
+          <DropdownItem arrow="">Accueil</DropdownItem>
+          <DropdownItem>Contact</DropdownItem>
+          <div className="dropdownItem__List" onClick={() => setActiveMenu("meubles")}>
+            <DropdownItem arrow="angle right">
               Meubles
             </DropdownItem>
           </div>
-          <div className="test" onClick={() => setActiveMenu("luminaires")}>
-            <DropdownItem icon="lightbulb outline" arrow="angle right">
+          <div className="dropdownItem__List" onClick={() => setActiveMenu("luminaires")}>
+            <DropdownItem arrow="angle right">
               Luminaires
             </DropdownItem>
           </div>
-          <div className="test" onClick={() => setActiveMenu("decorations")}>
-            <DropdownItem icon="heart" arrow="angle right">
+          <div className="dropdownItem__List" onClick={() => setActiveMenu("decorations")}>
+            <DropdownItem arrow="angle right">
               Décorations
             </DropdownItem>
           </div>
@@ -65,7 +78,7 @@ const DropdownTest = () => {
       >
         <div className="menu">
           <div onClick={() => setActiveMenu('main')}>
-            <DropdownItem icon="angle left">Retour</DropdownItem>
+            <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
           <DropdownItem>Banc</DropdownItem>
           <DropdownItem>Console</DropdownItem>
@@ -86,7 +99,7 @@ const DropdownTest = () => {
       >
         <div className="menu">
           <div onClick={() => setActiveMenu('main')}>
-            <DropdownItem icon="angle left">Retour</DropdownItem>
+            <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
           <DropdownItem>Applique murale</DropdownItem>
           <DropdownItem>Lampadaire</DropdownItem>
@@ -104,7 +117,7 @@ const DropdownTest = () => {
       >
         <div className="menu">
           <div onClick={() => setActiveMenu('main')}>
-            <DropdownItem icon="angle left">Retour</DropdownItem>
+            <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
           <DropdownItem>Miroire</DropdownItem>
           <DropdownItem>Cadre</DropdownItem>
