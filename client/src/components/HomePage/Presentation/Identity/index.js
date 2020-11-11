@@ -10,45 +10,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Identity = () => {
   const titleRef = useRef(null);
-  const sectionRef = useRef(null);
-  // useEffect(() => {
-  //   gsap.from(titleRef.current, {
-  //     duration: 1,
-  //     autoAlpha: 0,
-  //     ease: 'none',
-  //     delay: 1,
-  //     scrollTrigger: titleRef.current,
-  //   });
-  // }, [titleRef]);
-  // useEffect(() => {
-  //   gsap.from(sectionRef.current, {
-  //     opacity: 0,
-  //     duration: 6,
-  //     fontSize: 0,
-  //     scaleX: 1.25,
-  //     scaleY: 0.75,
-  //     scrollTrigger: {
-  //       trigger: sectionRef.current,
-  //       toggleActions: 'restart none none none',
-  //       end: 200,
-  //     },
-  //   });
-  //   gsap.to(sectionRef.current, {
-  //     opacity: 1,
-  //     fontSize: 1,
-  //     duration: 6,
-  //     scaleX: 1,
-  //     scaleY: 1,
-  //   });
-  // }, [sectionRef]);
+  const imageRef = useRef(null);
+  const textRef = useRef(null);
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: titleRef.current,
+        markers: true,
+        start: 'top bottom',
+        end: 'bottom top',
+        toggleActions: 'restart none none reset',
+      },
+    });
+    tl.from(titleRef.current, {
+      duration: 1,
+      y: -50,
+    })
+      .from(imageRef.current, { y: -50, opacity: 0, duration: 1 })
+      .from(textRef.current, { y: 50, opacity: 0, duration: 1 }, '<');
+  }, []);
   return (
-    <div className="identity" ref={sectionRef}>
+    <div className="identity">
       <h3 className="identity__title" ref={titleRef}>Qui suis-je ?</h3>
       <article className="identity__article">
-        <p className="identity__article__text">
+        <img src={handshake} alt="" className="identity__article__image" ref={imageRef} />
+        <p className="identity__article__text" ref={textRef}>
           Menuisier et artisan depuis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias unde officia distinctio reprehenderit ab quod nam delectus nobis deleniti dolores adipisci nemo aspernatur cum, et, sint voluptatem temporibus officiis.
         </p>
-        <img src={handshake} alt="" className="identity__article__image" />
       </article>
     </div>
   );
