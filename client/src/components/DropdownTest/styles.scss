@@ -1,0 +1,87 @@
+@use 'src/styles/vars';
+.dropdownTest {
+  width: 100%;
+  transition: width 500ms ease;
+  background-color: vars.$main-color;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: height 500ms ease;
+  padding: 0 1rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdownItem__list {
+  color: black;
+  height: 50px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 3rem;
+  font-size: 1.5rem;
+  border-bottom: rgb(154, 161, 161) solid 1px;
+  margin-left: auto;
+  margin: auto;
+  text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  .dropdownItem__list {
+    font-size: 2rem;
+  }
+}
+.menu {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin: auto;
+}
+
+.dropdownItem__list:hover {
+  color: #484a4d;
+}
+
+.right__icon {
+  margin-left: auto;
+}
+
+// .menu-item {
+//   margin-left: 1rem;
+//   margin: auto;
+// }
+
+.menu {
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all 500ms ease;
+}
+.menu-primary-exit {
+  position: absolute;
+  opacity: 0;
+}
+.menu-primary-exit-active {
+  transform: translateX(110%);
+  transition: all 500ms ease;
+  opacity: 0;
+}
+
+.menu-secondary-enter {
+  transform: translateX(-110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all 500ms ease;
+}
+.menu-secondary-exit {
+
+}
+.menu-secondary-exit-active {
+  transform: translateX(-110%);
+  transition: all 500ms ease;
+}

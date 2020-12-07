@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/AntoineDecamps/VB-project/issues"
   },
-  "homepage": "https://github.com/AntoineDecamps/VB-project#readme"
+  "homepage": "https://github.com/AntoineDecamps/VB-project#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "react-visibility-sensor": "^5.1.1"
+  }
 }

@@ -1,0 +1,96 @@
+@use 'src/styles/vars';
+
+.header {
+  // Mobile and Ipad version untill 900px
+  &__mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    border-bottom: 0.1px  rgb(205, 211, 211) solid;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  &__burgerMenu {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: #dad6d0;
+  }
+  &__logo {
+    max-width: 55px;
+  }
+  &__socialMedia {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 81px;
+    background-color: #dad6d0;
+    padding-left: 0.5rem;
+  }
+
+
+
+  // Desktop version 900px and above
+  &__desktop {
+    &__logo {
+      max-width: 60px;
+      position: relative;
+      left: 130px;
+    }
+    &__firstSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      margin: 0 2rem;
+      border-bottom: 1px rgb(205, 211, 211) solid;
+      font-weight: bold;
+      font-family: 'Montserrat';
+    }
+    &__secondSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      border-bottom: 1px rgb(205, 211, 211) solid;
+      font-weight: bold;
+      font-family: 'Montserrat';
+    }
+    &__contact {
+      display: flex;
+      &__left {
+        align-self: center;
+        padding-right: 1rem;
+      }
+      &__right {
+      }
+    }
+  }
+}
+.header__box {
+  &__left{
+    height: 100%;
+    width: 80px;
+    margin-left: 1.5rem;
+    padding: 0;
+    border-right: rgb(205, 211, 211) 1px solid;
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    height: 70px;
+    width: 150px;
+    padding: 0;
+    border-left: rgb(205, 211, 211) 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    background-color: #16a085;
+    
+  }
+}

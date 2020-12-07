@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+.dropdownSubCategories {
+  &__text {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    
+  }
+  &__presentation {
+    display: flex;
+    margin: 1rem 0 1rem 4rem;
+    padding: 1rem;
+  }
+}
+
+@media(min-width: 1024px) {
+  .dropdown {
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+
+  }
+  .dropdownSubCategories {
+    &__text {
+      font-size: 1.2rem;
+      padding-left: 1rem;
+      
+    }
+    &__presentation {
+      display: flex;
+      margin: 1rem 0 1rem 1rem;
+      padding: 1rem;
+    }
+  }
+}

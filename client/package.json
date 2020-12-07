@@ -55,12 +55,19 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "gsap": "^3.5.1",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
     "react-parallax": "^3.1.2",
     "react-redux": "*",
+    "react-rellax": "^1.0.3",
+    "react-responsive": "^8.1.0",
+    "react-transition-group": "^4.4.1",
     "redux": "*",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.0",
     "styled-components": "*"
   }
 }
