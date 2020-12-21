@@ -9,6 +9,7 @@ import DropdownTest from 'src/containers/DropdownTest';
 import HomePage from 'src/components/HomePage';
 import Contact from 'src/components/Contact';
 import Products from 'src/components/Products';
+import BackOffice from 'src/components/BackOffice';
 import Footer from 'src/components/Footer';
 
 // import 'semantic-ui-css/semantic.min.css';
@@ -17,7 +18,7 @@ import Footer from 'src/components/Footer';
 import './styles.css';
 
 // == Composant
-const App = ({ dropdown, getMeubles }) => {
+const App = ({ dropdown, meubles, getMeubles }) => {
   useEffect(() => {
     getMeubles();
   }, []);
@@ -38,6 +39,7 @@ const App = ({ dropdown, getMeubles }) => {
         <Products
           name="Meubles"
           redirectURL="meubles"
+          product={meubles}
         />
       </Route>
       <Route exact path="/luminaires">
@@ -51,6 +53,9 @@ const App = ({ dropdown, getMeubles }) => {
           name="Décorations"
           redirectURL="decorations"
         />
+      </Route>
+      <Route exact path="/admin">
+        <BackOffice />
       </Route>
       <Footer />
       {/* </Switch> */}

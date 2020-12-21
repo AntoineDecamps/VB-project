@@ -1,0 +1,18 @@
+@use 'src/styles/vars';
+
+.backOffice {
+  color: white;
+  height: 100%;
+  padding-right: 1rem;
+}
+.sideBar {
+  position: fixed;
+  width: 20%;
+  min-height: 100vh;
+  top: 0;
+  background-color: vars.$secondary-color;
+}
+
+.backHeader, .backHomePage, .produits, .users, .addCheese, .addWine, .addUser {
+  margin-left: 22%;
+}

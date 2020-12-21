@@ -1,0 +1,49 @@
+@use 'src/styles/vars';
+
+.sideBar {
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 4rem;
+    &__icon {
+      margin-right: 1rem;
+      align-self: center;
+    }
+    &__information {
+      display: flex;
+      flex-direction: column;
+      padding-left: 2rem;
+    }
+  }
+  &__text {
+    margin-bottom: 2rem;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  &__button {
+    padding: 1rem;
+    color: vars.$main-color;
+    border: 2px solid vars.$main-color;
+    border-radius: 2px;
+    background-color: vars.$secondary-color;
+    font-weight: bold;
+    &:hover {
+      color: vars.$secondary-color;
+      background-color: vars.$main-color;
+    }
+  }
+  &__nav {
+    list-style-type: none;
+    margin: 4rem 0;
+    padding: 2rem;
+    &__link {
+      margin-bottom: 2rem;
+      font-size: 1.2em;
+      &:hover {
+        color: vars.$main-color;
+      }
+    }
+  }
+}

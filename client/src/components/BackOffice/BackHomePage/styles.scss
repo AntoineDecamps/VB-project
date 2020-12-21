@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+
+.backHomePage {
+  margin-top: 2rem;
+  &__text {
+    margin-bottom: 1rem;
+  }
+  &__italic {
+    padding-top: 2rem;
+    font-style: italic;
+  }
+  &__button {
+    color: vars.$secondary-color;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid vars.$secondary-color;
+    padding: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30rem;
+    &:hover {
+      background-color: vars.$secondary-color;
+      color: black;
+    }
+  }
+}

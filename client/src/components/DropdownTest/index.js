@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 
 import { Icon } from 'semantic-ui-react';
 import { CSSTransition } from 'react-transition-group';
+import { NavLink } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -80,6 +81,13 @@ const DropdownTest = ({ open }) => {
           <div onClick={() => setActiveMenu('main')}>
             <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
+          <NavLink
+            to="/meubles"
+            exact
+          >
+            <DropdownItem>Tous les meubles</DropdownItem>
+          </NavLink>
+          <DropdownItem> </DropdownItem>
           <DropdownItem>Banc</DropdownItem>
           <DropdownItem>Console</DropdownItem>
           <DropdownItem>Etagère</DropdownItem>
@@ -101,6 +109,8 @@ const DropdownTest = ({ open }) => {
           <div onClick={() => setActiveMenu('main')}>
             <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
+          <DropdownItem>Tous les luminaires</DropdownItem>
+          <DropdownItem> </DropdownItem>
           <DropdownItem>Applique murale</DropdownItem>
           <DropdownItem>Lampadaire</DropdownItem>
           <DropdownItem>Lampe de table</DropdownItem>
@@ -119,6 +129,8 @@ const DropdownTest = ({ open }) => {
           <div onClick={() => setActiveMenu('main')}>
             <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
+          <DropdownItem>Toutes les décorations</DropdownItem>
+          <DropdownItem> </DropdownItem>
           <DropdownItem>Miroire</DropdownItem>
           <DropdownItem>Cadre</DropdownItem>
         </div>
