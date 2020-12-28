@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import handshake from './handshake.png';
+import benoit from './benoit.jpg';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
@@ -9,34 +9,36 @@ import './styles.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const Identity = () => {
-  const titleRef = useRef(null);
+  // const titleRef = useRef(null);
   const imageRef = useRef(null);
   const textRef = useRef(null);
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: titleRef.current,
+        trigger: textRef.current,
         markers: true,
         start: 'top bottom',
         end: 'bottom top',
         toggleActions: 'restart none none reset',
       },
     });
-    tl.from(titleRef.current, {
+    tl.from(imageRef.current, {
       duration: 1,
-      y: -50,
+      x: -50,
     })
-      .from(imageRef.current, { y: -50, opacity: 0, duration: 1 })
-      .from(textRef.current, { y: 50, opacity: 0, duration: 1 }, '<');
+      .from(textRef.current, { y: 50, duration: 1 }, '<');
   }, []);
   return (
     <div className="identity">
-      <h3 className="identity__title" ref={titleRef}>Qui suis-je ?</h3>
       <article className="identity__article">
-        <img src={handshake} alt="" className="identity__article__image" ref={imageRef} />
-        <p className="identity__article__text" ref={textRef}>
-          Menuisier et artisan depuis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias unde officia distinctio reprehenderit ab quod nam delectus nobis deleniti dolores adipisci nemo aspernatur cum, et, sint voluptatem temporibus officiis.
-        </p>
+        <img src={benoit} alt="" className="identity__article__image" ref={imageRef} />
+        <div className="identity__article__text" ref={textRef}>
+          <h3 className="identity__article__title">Qui suis-je ?</h3>
+          <p className="identity__article__p">
+            Menuisier et artisan depuis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias unde officia distinctio reprehenderit ab quod nam delectus nobis deleniti dolores adipisci nemo aspernatur cum, et, sint voluptatem temporibus officiis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla praesentium ad eligendi tempora modi a voluptate odio doloremque architecto eos voluptatibus sequi fugit dolor sit amet consectetur adipisicing elit. Nulla praesentium ad eligendi tempora modi a voluptate odio doloremque architecto eos voluptatibus sequi fugit
+          </p>
+        </div>
       </article>
     </div>
   );

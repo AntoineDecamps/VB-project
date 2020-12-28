@@ -23,9 +23,11 @@
   }
   &__mainImage {
     filter: brightness(70%);
-    background-image: url("test.jpg");
+    background-image: url("mainBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.6);
   }
   &__logo {
     filter: brightness(100%);
@@ -46,13 +48,13 @@
     width: 0.5px;
     height: 12vh;
     background-color: black;
-    margin: 8rem auto 0;
+    margin: 17rem auto 0;
   }
   &__bottomLine {
     width: 0.5px;
     height: 12vh;
     background-color: black;
-    margin: auto;
+    margin: 0 auto 17rem;
   }
 }
 
@@ -74,9 +76,10 @@
       padding: 2rem 0;
       &__title {
         font-size: 1.8rem;
+        margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   }
@@ -90,7 +93,7 @@
     }
     &__mainImage {
       height: 600px;
-      width: 95%;
+      width: 85%;
       margin: auto;
     }
     &__logo {
@@ -101,9 +104,10 @@
       margin: 0 4rem;
       &__title {
         font-size: 1.8rem;
+        margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   }
@@ -126,7 +130,8 @@
     &__explanation {
       margin: 0 10%;
       &__title {
-        font-size: 1.9rem;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
       }
       &__text {
         font-size: 1.2rem;
@@ -153,9 +158,10 @@
       margin: 0 15%;
       &__title {
         font-size: 2rem;
+        margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -168,7 +174,7 @@
     }
     &__mainImage {
       height: 800px;
-      width: 90%;
+      width: 85%;
       margin: auto;
     }
     &__logo {
@@ -178,10 +184,11 @@
     &__explanation {
       margin: 0 20%;
       &__title {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
+        margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
     }
   }
@@ -190,11 +197,11 @@
 @media (min-width: 1600px) {
   .concept {
     &__mainText {
-      font-size: 3.5rem;    
+      font-size: 3rem;    
     }
     &__mainImage {
-      height: 1200px;
-      width: 95%;
+      height: 950px;
+      width: 85%;
       margin: auto;
     }
     &__logo {
@@ -205,9 +212,10 @@
       margin: 0 25%;
       &__title {
         font-size: 2.4rem;
+        margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
       }
     }
   }

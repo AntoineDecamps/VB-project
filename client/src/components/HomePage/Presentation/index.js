@@ -22,7 +22,9 @@ const Presentation = () => {
       )}
       {isBigScreen && (
         <>
-          <p>COMING SOON</p>
+          <Identity />
+          <Philosophy />
+          <Expertise />
         </>
       )}
     </section>
