@@ -41,7 +41,7 @@
       display: flex;
       flex-direction: column;
       &__image {
-        width: 60%;
+        width: 80%;
         order: 2;
         // height: 230px;
         // margin: auto;
@@ -51,7 +51,7 @@
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.1rem;
         order: 1;
         width: 90%;
@@ -60,7 +60,7 @@
       &__title {
         border-bottom: 1px solid rgb(124, 122, 122);
         text-align: center;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
       }
       &__p {
         // text-align: center;
@@ -74,6 +74,7 @@
   .philosophy {
     margin-top: 20rem;
     &__article {
+      align-items: center;
       &__image {
         width: 40%;
         height: 350px;
@@ -83,7 +84,7 @@
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.1rem;
       }
     }
@@ -95,14 +96,14 @@
     margin-top: 20rem;
     &__article {
       &__image {
-        width: 50%;
+        width: 40%;
         // height: 230px;
         // margin: auto;
         border-radius: 15px;
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.1rem;
       }
     }
@@ -121,7 +122,7 @@
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.1rem;
       }
     }
@@ -140,7 +141,7 @@
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.1rem;
       }
     }
@@ -159,7 +160,7 @@
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.1rem;
       }
     }
@@ -178,57 +179,9 @@
       }
       &__text {
         // width: 20%;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         font-size: 1.4rem;
       }
     }
   }
 }
-
-
-
-
-
-// @media (min-width: 650px) and (max-width: 720px) {
-
-// }
-
-// @media (min-width: 720px) and (max-width: 1024px) {
-
-// }
-
-// @media (min-width: 1024px) and (max-width: 1200px) {
-
-// }
-
-// @media (min-width: 1200px) and (max-width: 1600px) {
-
-// }
-
-// @media (min-width: 1300px) and (max-width: 1850px) {
-//   .philosophy {
-//     margin-top: 10rem;
-//     &__article {
-//       &__image {
-//         width: 20%;
-//         // height: 230px;
-//         // margin: auto;
-//         border-radius: 15px;
-//       }
-//       &__text {
-//         // width: 20%;
-//         padding: 1rem 1rem;
-//         font-size: 1.1rem;
-//       }
-//     }
-//   }
-// }
-// @media (min-width: 1850px) {
-//   .philosophy {
-//     &__article {
-//       &__text {
-//         font-size: 1.4rem;
-//       }
-//     }
-//   }
-// }

@@ -3,6 +3,13 @@ const { Schema } = mongoose;
 
 const meublesSchema = new Schema({
     titre: String,
+    category: String,
+    hauteur: Number,
+    longeur: Number,
+    diametre: Number,
+    date: Date,
+    bois: String,
+    pied: String,
     description: String,
     image: String
 });
