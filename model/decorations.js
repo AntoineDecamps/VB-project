@@ -7,7 +7,7 @@ const decorationsSchema = new Schema({
     category: String,
     // hauteur: Number,
     // diametre: Number,
-    // date: Date,
+    date: String,
     // bois: String,
     description: String,
     image: String

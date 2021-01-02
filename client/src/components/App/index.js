@@ -9,6 +9,8 @@ import DropdownTest from 'src/containers/DropdownTest';
 import HomePage from 'src/components/HomePage';
 import Contact from 'src/components/Contact';
 import Products from 'src/components/Products';
+import Luminaires from 'src/components/Luminaires';
+import Decorations from 'src/components/Decorations';
 import BackOffice from 'src/components/BackOffice';
 import Footer from 'src/components/Footer';
 
@@ -18,9 +20,11 @@ import Footer from 'src/components/Footer';
 import './styles.css';
 
 // == Composant
-const App = ({ dropdown, meubles, getMeubles }) => {
+const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLuminaires, getDecorations }) => {
   useEffect(() => {
     getMeubles();
+    getLuminaires();
+    getDecorations();
   }, []);
   return (
     <div className="app">
@@ -43,15 +47,17 @@ const App = ({ dropdown, meubles, getMeubles }) => {
         />
       </Route>
       <Route exact path="/luminaires">
-        <Products
+        <Luminaires
           name="Luminaires"
           redirectURL="luminaires"
+          product={luminaires}
         />
       </Route>
       <Route exact path="/decorations">
-        <Products
+        <Decorations
           name="Décorations"
           redirectURL="decorations"
+          product={decorations}
         />
       </Route>
       <Route exact path="/admin">
