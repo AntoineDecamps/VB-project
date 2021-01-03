@@ -9,5 +9,11 @@ router.get('/api/meubles', (req, res) => {
         res.json(docs);
     })
 });
+router.get('/api/meubles/tables-appoint', (req, res) => {
+    const { Meubles } = req.model;
+    Meubles.find({ category: `table de salon`}, (err, docs) => {
+        res.json(docs);
+    })
+})
 
 module.exports = router;

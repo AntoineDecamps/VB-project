@@ -18,7 +18,7 @@ function DropdownItem(props) {
     </div>
   );
 }
-const DropdownTest = ({ open }) => {
+const DropdownTest = ({ open, handleMenu }) => {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -50,7 +50,12 @@ const DropdownTest = ({ open }) => {
         onEnter={calcHeight}
       >
         <div className="menu">
-          <DropdownItem arrow="">Accueil</DropdownItem>
+          <NavLink
+            to="/"
+            exact
+          >
+            <DropdownItem arrow=""><p onClick={handleMenu}>Accueil</p></DropdownItem>
+          </NavLink>
           <DropdownItem>Contact</DropdownItem>
           <div className="dropdownItem__List" onClick={() => setActiveMenu("meubles")}>
             <DropdownItem arrow="angle right">
@@ -82,19 +87,33 @@ const DropdownTest = ({ open }) => {
             <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
           <NavLink
-            to="/meubles"
+            to="/meuble"
             exact
           >
-            <DropdownItem>Tous les meubles</DropdownItem>
+            <DropdownItem><p onClick={handleMenu}>Tous les meubles</p></DropdownItem>
           </NavLink>
           <DropdownItem> </DropdownItem>
-          <DropdownItem>Banc</DropdownItem>
-          <DropdownItem>Console</DropdownItem>
-          <DropdownItem>Etagère</DropdownItem>
-          <DropdownItem>Meuble TV</DropdownItem>
-          <DropdownItem>Table</DropdownItem>
-          <DropdownItem>Table d'appoint</DropdownItem>
-          <DropdownItem>Table basse</DropdownItem>
+          <NavLink to="/banc" exact>
+            <DropdownItem><p onClick={handleMenu}>Banc</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/console" exact>
+            <DropdownItem><p onClick={handleMenu}>Console</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/etagere" exact>
+            <DropdownItem><p onClick={handleMenu}>Etagère</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/meubleTV" exact>
+            <DropdownItem><p onClick={handleMenu}>Meuble TV</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/table" exact>
+            <DropdownItem><p onClick={handleMenu}>Table</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/table-appoint" exact>
+            <DropdownItem><p onClick={handleMenu}>Table d'appoint</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/table-salon" exact>
+            <DropdownItem><p onClick={handleMenu}>Table de salon</p></DropdownItem>
+          </NavLink>
         </div>
       </CSSTransition>
 
@@ -109,12 +128,25 @@ const DropdownTest = ({ open }) => {
           <div onClick={() => setActiveMenu('main')}>
             <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
-          <DropdownItem>Tous les luminaires</DropdownItem>
+          <NavLink
+            to="/luminaires"
+            exact
+          >
+            <DropdownItem><p onClick={handleMenu}>Tous les luminaires</p></DropdownItem>
+          </NavLink>
           <DropdownItem> </DropdownItem>
-          <DropdownItem>Applique murale</DropdownItem>
-          <DropdownItem>Lampadaire</DropdownItem>
-          <DropdownItem>Lampe de table</DropdownItem>
-          <DropdownItem>Suspension</DropdownItem>
+          <NavLink to="/applque-murale" exact>
+            <DropdownItem><p onClick={handleMenu}>Applique murale</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/lampadaire" exact>
+            <DropdownItem><p onClick={handleMenu}>Lampadaire</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/lampe-de-table" exact>
+            <DropdownItem><p onClick={handleMenu}>Lampe de table</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/suspension" exact>
+            <DropdownItem><p onClick={handleMenu}>Suspension</p></DropdownItem>
+          </NavLink>
         </div>
       </CSSTransition>
 
@@ -129,10 +161,19 @@ const DropdownTest = ({ open }) => {
           <div onClick={() => setActiveMenu('main')}>
             <DropdownItem arrow="angle right">Retour</DropdownItem>
           </div>
-          <DropdownItem>Toutes les décorations</DropdownItem>
+          <NavLink
+            to="/decorations"
+            exact
+          >
+            <DropdownItem><p onClick={handleMenu}>Toutes les décorations</p></DropdownItem>
+          </NavLink>
           <DropdownItem> </DropdownItem>
-          <DropdownItem>Miroire</DropdownItem>
-          <DropdownItem>Cadre</DropdownItem>
+          <NavLink to="/miroire" exact>
+            <DropdownItem><p onClick={handleMenu}>Miroire</p></DropdownItem>
+          </NavLink>
+          <NavLink to="/cadre" exact>
+            <DropdownItem><p onClick={handleMenu}>Cadre</p></DropdownItem>
+          </NavLink>
         </div>
       </CSSTransition>
     </ul>
