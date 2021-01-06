@@ -8,8 +8,8 @@ router.get('/api/decoration/:id', (req, res) => {
     //     params : {id},
     //     model : {Meubles}
     // } = req;
-    Decorations.findById(id,(err, luminaire) => {
-        res.json(luminaire);
+    Decorations.findById(id,(err, decoration) => {
+        res.json(decoration);
     });
 });
 

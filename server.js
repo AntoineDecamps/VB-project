@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const dbMiddleware = require('./middlewares/mongodb.js');
 const meublesRouter = require('./routes/meubles.js');
@@ -16,8 +17,10 @@ app.use(bodyParser.json());
 app.use(dbMiddleware);
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', '*');
     next();
 });
+app.use(cors());
 
 app.use(meublesRouter);
 app.use(meubleRouter);

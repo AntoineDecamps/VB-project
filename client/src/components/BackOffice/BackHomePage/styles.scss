@@ -1,7 +1,9 @@
 @use 'src/styles/vars';
 
 .backHomePage {
-  margin-top: 2rem;
+  padding-top: 3rem;
+  height: 100vh;
+  background-color: #524937;
   &__text {
     margin-bottom: 1rem;
   }

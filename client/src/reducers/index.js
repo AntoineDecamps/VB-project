@@ -4,6 +4,8 @@ import dropdown from './dropdown';
 import meubles from './meubles';
 import luminaires from './luminaires';
 import decorations from './decorations';
+import edit from './edit';
+import modal from './modal';
 
 export default combineReducers({
   burgerMenu,
@@ -11,4 +13,6 @@ export default combineReducers({
   meubles,
   luminaires,
   decorations,
+  edit,
+  modal,
 });

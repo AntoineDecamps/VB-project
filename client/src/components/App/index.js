@@ -45,139 +45,223 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
   return (
     <div className="app">
       {/* <Switch> */}
-      <Header />
-      {dropdown && (
-        <DropdownTest />
-      )}
       <Route exact path="/">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <HomePage />
+        <Footer />
       </Route>
       <Route exact path="/contact">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Contact />
+        <Footer />
       </Route>
       {/* Route affichant tous les meubles */}
       <Route exact path="/meuble">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={meubles}
         />
+        <Footer />
       </Route>
       {/* Route spécifique Banc */}
       <Route exact path="/banc">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={banc}
         />
+        <Footer />
       </Route>
       {/* Route spécifique Console */}
       <Route exact path="/console">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={console}
         />
+        <Footer />
       </Route>
       {/* Route spécifique etagere */}
       <Route exact path="/etagere">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={etagere}
         />
+        <Footer />
       </Route>
       {/* Route spécifique meubleTV */}
       <Route exact path="/meubleTV">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={meubleTV}
         />
+        <Footer />
       </Route>
       {/* Route spécifique table */}
       <Route exact path="/table">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={table}
         />
+        <Footer />
       </Route>
       {/* Route spécifique table d'appoint */}
       <Route exact path="/table-appoint">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           product={tableAppoint}
         />
+        <Footer />
       </Route>
       {/* Route spécifique table de salon */}
       <Route exact path="/table-salon">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Products
           name="Meubles"
           redirectURL="meubles"
           product={tableSalon}
         />
+        <Footer />
       </Route>
-
 
       {/* Route affichant tous les luminaires */}
       <Route exact path="/luminaires">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Luminaires
           name="Luminaires"
           product={luminaires}
         />
+        <Footer />
       </Route>
       {/* Route spécifique applique murale */}
       <Route exact path="/applique-murale">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Luminaires
           name="Luminaires"
           product={appliqueMurale}
         />
+        <Footer />
       </Route>
       {/* Route spécifique lampadaire */}
       <Route exact path="/lampadaire">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Luminaires
           name="Luminaires"
           product={lampadaire}
         />
+        <Footer />
       </Route>
       {/* Route spécifique lampe de table */}
       <Route exact path="/lampe-de-table">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Luminaires
           name="Luminaires"
           product={lampeDeTable}
         />
+        <Footer />
       </Route>
       {/* Route spécifique suspension */}
       <Route exact path="/suspension">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Luminaires
           name="Luminaires"
           product={suspension}
         />
+        <Footer />
       </Route>
-
 
       {/* Route affichant toutes les décorations */}
       <Route exact path="/decorations">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Decorations
           name="Décorations"
           product={decorations}
         />
+        <Footer />
       </Route>
       {/* Route spécifique miroire */}
       <Route exact path="/miroire">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Decorations
           name="Décorations"
           product={miroire}
         />
+        <Footer />
       </Route>
       {/* Route spécifique cadre */}
       <Route exact path="/cadre">
+        <Header />
+        {dropdown && (
+          <DropdownTest />
+        )}
         <Decorations
           name="Décorations"
           product={cadre}
         />
+        <Footer />
       </Route>
-
-
-      <Route exact path="/admin">
-        <BackOffice />
-      </Route>
-      <Footer />
+      {/* BackOffice */}
+      <BackOffice
+        meubles={meubles}
+        luminaires={luminaires}
+        decorations={decorations}
+      />
       {/* </Switch> */}
     </div>
   );

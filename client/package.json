@@ -57,6 +57,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "axios": "^0.21.0",
+    "formik": "^2.2.6",
     "gsap": "^3.5.1",
     "prop-types": "*",
     "react": "*",
@@ -70,6 +71,9 @@
     "redux": "*",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0",
-    "styled-components": "*"
+    "styled-components": "*",
+    "swal": "^0.1.0",
+    "sweetalert": "^2.1.2",
+    "yup": "^0.32.8"
   }
 }
