@@ -2,31 +2,65 @@
 
 .produits {
   color: white;
+  background-color: #746851;
   &__flexButton {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    padding-right: 6rem;
   }
   &__button {
-    color: vars.$secondary-color;
-    background-color: vars.$main-color;
-    border: 2px solid vars.$secondary-color;
+    color: vars.$main-color;
+    background-color: vars.$secondary-color;
+    border: 2px solid #746851;
     padding: 1rem;
     height: 100%;
     font-weight: bold;
+    height: 80px;
+    width: 180px;
     &:hover {
-      background-color: vars.$secondary-color;
-      color: vars.$main-color;
+      background-color: #4b4334;
+      color: vars.$secondary-color;
     }
   }
   &__title {
     font-size: 1.5em;
+    min-width: 250px;
+    color: vars.$main-color;
+    text-transform: uppercase;
+    align-self: left;
+    margin-right: 58rem;
+  }
+}
+
+.displayProduct {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+  width: 650px;
+  &__div {
+    align-self: start;
+    margin-top: 1rem;
+  }
+  &__image {
+    height: 600px;
+    width: 600px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    margin-right: 3rem;
+  }
+  &__titre {
+    color: vars.$main-color;
+    margin-top: -2rem;
   }
   &__table {
     margin-top: 4rem;
-    margin-right: 1rem;
-    border: 2px solid vars.$secondary-color;
-    width: 200px;
+    margin-right: 3rem;
+    border: 1px solid vars.$secondary-color;
+    width: 650px;
     height: 200px;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 2px;
     &__button {
       color: vars.$secondary-color;
       background-color: vars.$main-color;
@@ -39,36 +73,64 @@
         color: vars.$main-color;
       }
     }
+    &__lastChild {
+      text-align: center;
+      align-items: center;
+    }
   }
   &__table th {
-    background-color: vars.$main-color;
-    color: vars.$secondary-color;
+    color: vars.$main-color;
+    background-color: #665a45;
     font-size: 1.3em;
     font-weight: bold;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
+    vertical-align: middle;
     padding: 1rem;
     border: 1px solid vars.$secondary-color;
   }
   &__table td {
     padding: 1rem;
+    color: vars.$main-color;
     border: 1px solid vars.$secondary-color;
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 1.2em;
     vertical-align: middle;
-    text-align: center;
-    &:nth-child(3) {
-      text-align: left;
+    max-width: 500px;
+    word-wrap: break-word;
+  }
+  &__button {
+    color: vars.$main-color;
+    background-color: vars.$secondary-color;
+    border: 2px solid #746851;
+    padding: 1rem;
+    height: 100%;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 15px;
+    &:hover {
+      background-color: #4b4334;
+      color: vars.$secondary-color;
     }
   }
 }
 
-.displayProduct {
+.fixMargin {
+  height: 5rem;
+}
+
+
+.ui.modal {
+  height: 250px;
+}
+
+
+.ui.modal>.actions {
   display: flex;
-  justify-content: start;
   align-items: center;
-  &__image {
-    height: 663px;
-    margin-top: 4rem;
-  }
+  margin-top: 3rem;
+  padding-top: 3rem;
+}
+button.ui.blue.button {
+  margin-left: 33rem;
 }

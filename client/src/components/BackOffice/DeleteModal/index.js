@@ -43,14 +43,14 @@ const DeleteModal = ({ open, openDelete, closeDelete, id, apiURL, redirect, getM
       <Modal
         closeIcon
         open={open}
-        trigger={<p>Supprimer</p>}
+        trigger={<Button color="red">Supprimer</Button>}
         onClose={() => closeDelete()}
         onOpen={() => openDelete()}
       >
         <Header icon="archive" content="Suppression de la base de donnée" />
         <Modal.Content>
           <p>
-            Etes-vous sûr de vouloir supprimer ce produit ?
+            Etes-vous sûr de vouloir supprimer le produit ?
           </p>
         </Modal.Content>
         <Modal.Actions>

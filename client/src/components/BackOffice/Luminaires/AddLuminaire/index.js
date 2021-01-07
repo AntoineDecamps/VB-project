@@ -93,6 +93,7 @@ const AddLuminaire = () => {
             <option value="Lampe de table" label="Lampe de table" />
             <option value="Suspension" label="Suspension" />
           </select>
+          {formik.touched.category && formik.errors.category ? <div className="form__errors">{formik.errors.category}</div> : null}
         </label>
 
         <label htmlFor="description" className="add__label">Description
@@ -106,17 +107,17 @@ const AddLuminaire = () => {
         </label>
 
         <label htmlFor="image" className="add__label">Hauteur
-          <input type="text" placeholder="Veuillez entrer une hauteur" id="hauteur" name="hauteur" className="add__input" onChange={formik.handleChange} value={formik.values.hauteur} onBlur={formik.handleBlur} />
+          <input type="number" placeholder="Veuillez entrer une hauteur" id="hauteur" name="hauteur" className="add__input" onChange={formik.handleChange} value={formik.values.hauteur} onBlur={formik.handleBlur} />
           {formik.touched.hauteur && formik.errors.hauteur ? <div className="form__errors">{formik.errors.hauteur}</div> : null}
         </label>
 
         <label htmlFor="image" className="add__label">Diamètre
-          <input type="text" placeholder="Veuillez entrer un diamètre à la place de largeur et longeur" id="diametre" name="diametre" className="add__input" onChange={formik.handleChange} value={formik.values.diametre} onBlur={formik.handleBlur} />
+          <input type="number" placeholder="Veuillez entrer un diamètre à la place de largeur et longeur" id="diametre" name="diametre" className="add__input" onChange={formik.handleChange} value={formik.values.diametre} onBlur={formik.handleBlur} />
           {formik.touched.diametre && formik.errors.diametre ? <div className="form__errors">{formik.errors.diametre}</div> : null}
         </label>
 
         <label htmlFor="image" className="add__label">Date de création
-          <input type="text" placeholder="Veuillez entrer une date de création" id="date" name="date" className="add__input" onChange={formik.handleChange} value={formik.values.date} onBlur={formik.handleBlur} />
+          <input type="date" placeholder="Veuillez entrer une date de création" id="date" name="date" className="add__input" onChange={formik.handleChange} value={formik.values.date} onBlur={formik.handleBlur} />
           {formik.touched.date && formik.errors.date ? <div className="form__errors">{formik.errors.date}</div> : null}
         </label>
 

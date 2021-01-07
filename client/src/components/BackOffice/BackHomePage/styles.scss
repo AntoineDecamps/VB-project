@@ -3,9 +3,17 @@
 .backHomePage {
   padding-top: 3rem;
   height: 100vh;
-  background-color: #524937;
+  background-color: #746851;
+  &__titre {
+    border-bottom: 1px solid vars.$main-color;
+    display: inline;
+    color: vars.$main-color;
+  }
   &__text {
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: vars.$main-color;
   }
   &__italic {
     padding-top: 2rem;

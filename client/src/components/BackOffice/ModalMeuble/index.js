@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
-import { Button } from 'semantic-ui-react';
+import { Button, Modal, Icon, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { redirectToMeubles } from 'src/selectors';
 import DeleteModal from 'src/containers/DeleteModal';
@@ -11,9 +11,6 @@ import swal from 'sweetalert';
 
 import './styles.scss';
 
-// this component was first initiliased for wines and cheeses but finally it will only be used
-// for cheeses as we integreted an edit form in it which is specific to cheeses
-// => normaly it should have been called ModalCheese
 const ModalMeuble = ({
   open,
   openModal,
@@ -99,37 +96,9 @@ const ModalMeuble = ({
   });
   return (
     <div className="modalMeuble">
-      {!edit && (
-        <div className="modal">
-          <h2 className="modal__title">Nom</h2>
-          <p className="modal__content">{titre}</p>
-          <h2 className="modal__title">Catégorie</h2>
-          <p className="modal__content">{category}</p>
-          <h2 className="modal__title">Hauteur</h2>
-          <p className="modal__content">{hauteur}</p>
-          <h2 className="modal__title">Largeur</h2>
-          <p className="modal__content">{largeur}</p>
-          <h2 className="modal__title">Longeur</h2>
-          <p className="modal__content">{longueur}</p>
-          <h2 className="modal__title">Diamètre</h2>
-          <p className="modal__content">{diametre}</p>
-          <h2 className="modal__title">Date</h2>
-          <p className="modal__content">{date}</p>
-          <h2 className="modal__title">Bois</h2>
-          <p className="modal__content">{bois}</p>
-          <h2 className="modal__title">Pied</h2>
-          <p className="modal__content">{pied}</p>
-          <h2 className="modal__title">Description</h2>
-          <p className="modal__content">{description}</p>
-          <h2 className="modal__title">Image Principale</h2>
-          <p className="modal__content">{image}</p>
-          <Button color="yellow" onClick={() => openEdit()}>Modifier</Button>
-        </div>
-      )}
-      {edit && (
       <div className="editMeuble">
-        <h1 className="editMeuble__title">Modifier {titre}</h1>
-        <form className="edit__form" onSubmit={formik.handleSubmit}>
+        <h1 className="editMeuble__title">{`Modifier ${titre}`}</h1>
+        <form className="add__form" onSubmit={formik.handleSubmit}>
           <label htmlFor="name" className="add__label">Titre
             <input type="text" placeholder="Le titre/numéro unique du produit" id="titre" name="titre" className="add__input" onChange={formik.handleChange} value={formik.values.titre} onBlur={formik.handleBlur} />
             {formik.touched.titre && formik.errors.titre ? <div className="form__errors">{formik.errors.titre}</div> : null}
@@ -151,6 +120,7 @@ const ModalMeuble = ({
               <option value="Table d'appoint" label="Table d'appoint" />
               <option value="Table de salon" label="Table de salon" />
             </select>
+            {formik.touched.category && formik.errors.category ? <div className="form__errors">{formik.errors.category}</div> : null}
           </label>
 
           <label htmlFor="description" className="add__label">Description
@@ -164,22 +134,22 @@ const ModalMeuble = ({
           </label>
 
           <label htmlFor="image" className="add__label">Hauteur
-            <input type="text" placeholder="Veuillez entrer une hauteur" id="hauteur" name="hauteur" className="add__input" onChange={formik.handleChange} value={formik.values.hauteur} onBlur={formik.handleBlur} />
+            <input type="number" placeholder="Veuillez entrer une hauteur" id="hauteur" name="hauteur" className="add__input" onChange={formik.handleChange} value={formik.values.hauteur} onBlur={formik.handleBlur} />
             {formik.touched.hauteur && formik.errors.hauteur ? <div className="form__errors">{formik.errors.hauteur}</div> : null}
           </label>
 
           <label htmlFor="image" className="add__label">Longeur
-            <input type="text" placeholder="Veuillez entrer une longeur" id="longeur" name="longeur" className="add__input" onChange={formik.handleChange} value={formik.values.longeur} onBlur={formik.handleBlur} />
+            <input type="number" placeholder="Veuillez entrer une longeur" id="longeur" name="longeur" className="add__input" onChange={formik.handleChange} value={formik.values.longeur} onBlur={formik.handleBlur} />
             {formik.touched.longeur && formik.errors.longeur ? <div className="form__errors">{formik.errors.longeur}</div> : null}
           </label>
 
           <label htmlFor="image" className="add__label">Largeur
-            <input type="text" placeholder="Veuillez entrer une largeur" id="largeur" name="largeur" className="add__input" onChange={formik.handleChange} value={formik.values.largeur} onBlur={formik.handleBlur} />
+            <input type="number" placeholder="Veuillez entrer une largeur" id="largeur" name="largeur" className="add__input" onChange={formik.handleChange} value={formik.values.largeur} onBlur={formik.handleBlur} />
             {formik.touched.largeur && formik.errors.largeur ? <div className="form__errors">{formik.errors.largeur}</div> : null}
           </label>
 
           <label htmlFor="image" className="add__label">Diamètre
-            <input type="text" placeholder="Veuillez entrer un diamètre à la place de largeur et longeur" id="diametre" name="diametre" className="add__input" onChange={formik.handleChange} value={formik.values.diametre} onBlur={formik.handleBlur} />
+            <input type="number" placeholder="Veuillez entrer un diamètre à la place de largeur et longeur" id="diametre" name="diametre" className="add__input" onChange={formik.handleChange} value={formik.values.diametre} onBlur={formik.handleBlur} />
             {formik.touched.diametre && formik.errors.diametre ? <div className="form__errors">{formik.errors.diametre}</div> : null}
           </label>
 
@@ -199,27 +169,15 @@ const ModalMeuble = ({
           </label>
 
           <button type="submit" className="add__button">
-            Envoyer
+            Confirmer la modification
+          </button>
+          <button type="submit" className="add__button__bis">
+            <Link exact to="/admin/meubles">
+              Retourner à la liste des meubles
+            </Link>
           </button>
         </form>
       </div>
-      )}
-      <Button color="red">
-        <DeleteModal
-          id={id}
-          apiURL="meuble"
-          redirect="meubles"
-        />
-      </Button>
-      <Button color="yellow" onClick={() => openEdit()}>Modifier</Button>
-      <Button color="green">
-        <Link to="/admin/meubles" onClick={() => closeEdit()}>
-          Retour liste des meubles
-        </Link>
-      </Button>
-      {/* <Button onClick={() => closeModal()} primary>
-        Proceed <Icon name="chevron right" />
-      </Button> */}
     </div>
   );
 };

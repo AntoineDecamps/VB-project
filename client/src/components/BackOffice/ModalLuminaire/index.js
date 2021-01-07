@@ -87,31 +87,9 @@ const ModalLuminaire = ({
   });
   return (
     <div className="modalMeuble">
-      {!edit && (
-        <div className="modal">
-          <h2 className="modal__title">Nom</h2>
-          <p className="modal__content">{titre}</p>
-          <h2 className="modal__title">Catégorie</h2>
-          <p className="modal__content">{category}</p>
-          <h2 className="modal__title">Hauteur</h2>
-          <p className="modal__content">{hauteur}</p>
-          <h2 className="modal__title">Diamètre</h2>
-          <p className="modal__content">{diametre}</p>
-          <h2 className="modal__title">Date</h2>
-          <p className="modal__content">{date}</p>
-          <h2 className="modal__title">Bois</h2>
-          <p className="modal__content">{bois}</p>
-          <h2 className="modal__title">Description</h2>
-          <p className="modal__content">{description}</p>
-          <h2 className="modal__title">Image Principale</h2>
-          <p className="modal__content">{image}</p>
-          <Button color="yellow" onClick={() => openEdit()}>Modifier</Button>
-        </div>
-      )}
-      {edit && (
       <div className="editMeuble">
         <h1 className="editMeuble__title">Modifier {titre}</h1>
-        <form className="edit__form" onSubmit={formik.handleSubmit}>
+        <form className="add__form" onSubmit={formik.handleSubmit}>
           <label htmlFor="name" className="add__label">Titre
             <input type="text" placeholder="Le titre/numéro unique du produit" id="titre" name="titre" className="add__input" onChange={formik.handleChange} value={formik.values.titre} onBlur={formik.handleBlur} />
             {formik.touched.titre && formik.errors.titre ? <div className="form__errors">{formik.errors.titre}</div> : null}
@@ -163,27 +141,15 @@ const ModalLuminaire = ({
           </label>
 
           <button type="submit" className="add__button">
-            Envoyer
+            Confirmer la modification
+          </button>
+          <button type="submit" className="add__button__bis">
+            <Link exact to="/admin/luminaires">
+              Retourner à la liste des luminaires
+            </Link>
           </button>
         </form>
       </div>
-      )}
-      <Button color="red">
-        <DeleteModal
-          id={id}
-          apiURL="luminaire"
-          redirect="luminaires"
-        />
-      </Button>
-      <Button color="yellow" onClick={() => openEdit()}>Modifier</Button>
-      <Button color="green">
-        <Link to="/admin/luminaires" onClick={() => closeEdit()}>
-          Retour liste des luminaires
-        </Link>
-      </Button>
-      {/* <Button onClick={() => closeModal()} primary>
-        Proceed <Icon name="chevron right" />
-      </Button> */}
     </div>
   );
 };

@@ -1,7 +1,6 @@
 @use 'src/styles/vars';
 
 .sideBar {
-
   &__top {
     display: flex;
     justify-content: center;
@@ -14,7 +13,7 @@
     &__information {
       display: flex;
       flex-direction: column;
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
   }
   &__text {
@@ -36,13 +35,15 @@
   }
   &__nav {
     list-style-type: none;
+    font-size: 1.5rem;
     margin: 4rem 0;
     padding: 2rem;
     &__link {
       margin-bottom: 2rem;
       font-size: 1.2em;
+      color: vars.$main-color;
       &:hover {
-        color: vars.$main-color;
+        color: rgb(105, 86, 86);
       }
     }
   }
