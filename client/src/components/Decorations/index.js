@@ -20,7 +20,11 @@ const Decorations = ({ product, name, redirectURL }) => {
       ));
       return (
         <div className="products">
-          {Card}
+          <h2 className="products__title">{name}</h2>
+          <p className="products__p">Retrouvez ci-dessous mes créations</p>
+          <div className="products__cards">
+            {Card}
+          </div>
         </div>
       );
     };

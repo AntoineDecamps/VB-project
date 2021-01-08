@@ -80,7 +80,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Bancs"
           product={banc}
         />
         <Footer />
@@ -92,7 +92,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Consoles"
           product={console}
         />
         <Footer />
@@ -104,7 +104,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Etagères"
           product={etagere}
         />
         <Footer />
@@ -116,7 +116,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Meubles TV"
           product={meubleTV}
         />
         <Footer />
@@ -128,7 +128,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Tables"
           product={table}
         />
         <Footer />
@@ -140,7 +140,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Tables d'appoint"
           product={tableAppoint}
         />
         <Footer />
@@ -152,7 +152,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Products
-          name="Meubles"
+          name="Tables de salon"
           redirectURL="meubles"
           product={tableSalon}
         />
@@ -178,7 +178,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Luminaires
-          name="Luminaires"
+          name="Appliques-murale"
           product={appliqueMurale}
         />
         <Footer />
@@ -190,7 +190,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Luminaires
-          name="Luminaires"
+          name="Lampadaires"
           product={lampadaire}
         />
         <Footer />
@@ -214,7 +214,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Luminaires
-          name="Luminaires"
+          name="Suspensions"
           product={suspension}
         />
         <Footer />
@@ -239,7 +239,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Decorations
-          name="Décorations"
+          name="Miroires"
           product={miroire}
         />
         <Footer />
@@ -251,7 +251,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
           <DropdownTest />
         )}
         <Decorations
-          name="Décorations"
+          name="Cadres"
           product={cadre}
         />
         <Footer />

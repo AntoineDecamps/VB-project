@@ -15,8 +15,16 @@ const Cards = ({ name, date, category, hauteur, diametre, bois, description, ima
     <section className="cards__thirdSection">
       <p className="cards__thirdSection__descriptif">{description}</p>
       <ul className="cards__dimension">
-        <li className="cards__dimension__li">{`Hauteur: ${hauteur} cm`}</li>
-        <li className="cards__dimension__li">{`Diamètre: ${diametre} cm`}</li>
+        <table className="cards__thirdSection__table">
+          <tr key="array">
+            <th>Hauteur</th>
+            <td>{`${hauteur} CM`}</td>
+          </tr>
+          <tr key="array">
+            <th>Diamètre</th>
+            <td>{`${diametre} CM`}</td>
+          </tr>
+        </table>
       </ul>
     </section>
     <section className="cards__fourthSection__luminaire">

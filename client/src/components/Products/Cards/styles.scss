@@ -2,7 +2,7 @@
 
 //version desktop
 .cards {
-  width: 400px;
+  width: 450px;
   border: 1px solid black;
   border-radius: 15px;
   margin: 2rem;
@@ -10,14 +10,16 @@
   background-color: vars.$main-color;
   transition: 0.5s ease;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
   &__image {
     width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    height: 435px;
   }
   &__title {
     text-align: center;
-    font-family: 'MirageRegular', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin-top: 1rem;
   }
@@ -30,13 +32,43 @@
   &__p {
     margin: 1rem auto;
   }
-  &__dimension__li {
+  &__thirdSection__dimension__li {
     margin-top: 1rem;
   }
   &__thirdSection {
     margin: 2rem 1rem;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &__descriptif {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    &__dimension {
+      margin-top: 2rem;
+      // align-self: flex-end;
+    }
+    &__table {
+      border: 1px solid vars.$secondary-color;
+      border-collapse: separate;
+      border-spacing: 2px;
+      margin: auto;
+    }
+    &__table th {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      vertical-align: middle;
+      padding: 1rem;
+      border: 1px solid vars.$secondary-color;
+    }
+    &__table td {
+      padding: 1rem;
+      border: 1px solid vars.$secondary-color;
+      line-height: 1.2em;
+      vertical-align: middle; 
+      word-wrap: break-word;
     }
   }
   &__fourthSection {
@@ -68,4 +100,28 @@
 .cards:hover {
   transform: scale(1.1);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+
+
+// Ipad
+@media (max-width: 1120px) {
+  .cards {
+    width: 600px;
+    &__image {
+      height: 600px;
+    }
+  }
+}
+
+
+// Smartphone
+@media (max-width: 600px) {
+  .cards {
+    width: 337px;
+    margin: 0 0 4rem 0;
+    &__image {
+      height: 300px;
+    }
+  }
 }

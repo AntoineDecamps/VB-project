@@ -8,17 +8,36 @@ const Cards = ({ name, date, category, hauteur, longueur, largeur, diametre, boi
   if (longueur === 'none') {
     dimensionToDisplay = () => (
       <>
-        <li className="cards__dimension__li">{`Hauteur: ${hauteur} cm`}</li>
-        <li className="cards__dimension__li">{`Diamètre: ${diametre} cm`}</li>
+        <table className="cards__thirdSection__table">
+          <tr key="array">
+            <th>Hauteur</th>
+            <td>{`${hauteur} CM`}</td>
+          </tr>
+          <tr key="array">
+            <th>Diamètre</th>
+            <td>{`${diametre} CM`}</td>
+          </tr>
+        </table>
       </>
     );
   }
   else {
     dimensionToDisplay = () => (
       <>
-        <li className="cards__dimension__li">{`Hauteur: ${hauteur} cm`}</li>
-        <li className="cards__dimension__li">{`Longueur: ${longueur} cm`}</li>
-        <li className="cards__dimension__li">{`Largeur: ${largeur} cm`}</li>
+        <table className="cards__thirdSection__table">
+          <tr key="array">
+            <th>Hauteur</th>
+            <td>{`${hauteur} CM`}</td>
+          </tr>
+          <tr key="array">
+            <th>Longueur</th>
+            <td>{`${longueur} CM`}</td>
+          </tr>
+          <tr key="array">
+            <th>Largeur</th>
+            <td>{`${largeur} CM`}</td>
+          </tr>
+        </table>
       </>
     );
   }
@@ -33,7 +52,7 @@ const Cards = ({ name, date, category, hauteur, longueur, largeur, diametre, boi
       </section>
       <section className="cards__thirdSection">
         <p className="cards__thirdSection__descriptif">{description}</p>
-        <ul className="cards__dimension">
+        <ul className="cards__thirdSection__dimension">
           {dimensionToDisplay()}
         </ul>
       </section>
