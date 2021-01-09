@@ -9,13 +9,17 @@ const Decorations = ({ product, name, redirectURL }) => {
   let cardToDisplay;
   if (product.length > 0) {
     cardToDisplay = () => {
-      const Card = product.map(({ titre, date, category, description, image }) => (
+      const Card = product.map(({ titre, id, date, category, description, image, hauteur, largeur, bois }) => (
         <Cards
           name={titre}
           date={date}
           category={category}
           description={description}
+          hauteur={hauteur}
+          largeur={largeur}
           image={image}
+          bois={bois}
+          id={id}
         />
       ));
       return (
@@ -31,11 +35,11 @@ const Decorations = ({ product, name, redirectURL }) => {
   }
   else {
     cardToDisplay = () => (
-      <p>Aucun produit lié à la décoration n'est encore affiché </p>
+      <p className="products__notFound">Aucun produit lié à cette catégorie n'est encore affiché </p>
     );
   }
   return (
-    <div className="products">
+    <div className="product">
       {cardToDisplay()}
     </div>
   );

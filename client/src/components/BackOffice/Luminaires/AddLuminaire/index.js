@@ -8,12 +8,6 @@ import * as Yup from 'yup';
 import swal from 'sweetalert';
 
 const AddLuminaire = () => {
-  // formik hook takes an object as parameter and return an object that we stock in a variable
-  // which contains usefull properties and methods that we can use on this form to :
-  // Managing the form state
-  // Handling form submission
-  // Validation and error messages
-  // properties stocked in the initialValues should correspond to attribute name of the input
   const validationSchema = Yup.object({
     titre: Yup.string().required('Veuillez entrer un nom pour ce produit'),
     category: Yup.string().required('Veuillez préciser la catégorie du produit'),
@@ -30,6 +24,9 @@ const AddLuminaire = () => {
       category: '',
       description: '',
       image: '',
+      image1: '',
+      image2: '',
+      image3: '',
       hauteur: '',
       diametre: '',
       date: '',
@@ -44,6 +41,9 @@ const AddLuminaire = () => {
           category: values.category,
           description: values.description,
           image: values.image,
+          image1: values.image1,
+          image2: values.image2,
+          image3: values.image3,
           hauteur: values.hauteur,
           diametre: values.diametre,
           date: values.date,
@@ -88,7 +88,7 @@ const AddLuminaire = () => {
             onBlur={formik.handleBlur}
           >
             <option value="" label="Choisissez une catégorie" />
-            <option value="Applique Murale" label="Applique Murale" />
+            <option value="Applique murale" label="Applique Murale" />
             <option value="Lampadaire" label="Lampadaire" />
             <option value="Lampe de table" label="Lampe de table" />
             <option value="Suspension" label="Suspension" />
@@ -104,6 +104,21 @@ const AddLuminaire = () => {
         <label htmlFor="image" className="add__label">Image
           <input type="text" placeholder="Veuillez entrer une url" id="image" name="image" className="add__input" onChange={formik.handleChange} value={formik.values.image} onBlur={formik.handleBlur} />
           {formik.touched.image && formik.errors.image ? <div className="form__errors">{formik.errors.image}</div> : null}
+        </label>
+
+        <label htmlFor="image1" className="add__label">Image Secondaire 1
+          <input type="text" placeholder="Veuillez entrer une url" id="image1" name="image1" className="add__input" onChange={formik.handleChange} value={formik.values.image1} onBlur={formik.handleBlur} />
+          {formik.touched.image1 && formik.errors.image1 ? <div className="form__errors">{formik.errors.image1}</div> : null}
+        </label>
+
+        <label htmlFor="image2" className="add__label">Image Secondaire 2
+          <input type="text" placeholder="Veuillez entrer une url" id="image2" name="image2" className="add__input" onChange={formik.handleChange} value={formik.values.image2} onBlur={formik.handleBlur} />
+          {formik.touched.image2 && formik.errors.image2 ? <div className="form__errors">{formik.errors.image2}</div> : null}
+        </label>
+
+        <label htmlFor="image3" className="add__label">Image Secondaire 3
+          <input type="text" placeholder="Veuillez entrer une url" id="image3" name="image3" className="add__input" onChange={formik.handleChange} value={formik.values.image3} onBlur={formik.handleBlur} />
+          {formik.touched.image3 && formik.errors.image3 ? <div className="form__errors">{formik.errors.image3}</div> : null}
         </label>
 
         <label htmlFor="image" className="add__label">Hauteur

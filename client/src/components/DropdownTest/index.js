@@ -58,17 +58,17 @@ const DropdownTest = ({ open, handleMenu }) => {
           </NavLink>
           <DropdownItem>Contact</DropdownItem>
           <div className="dropdownItem__List" onClick={() => setActiveMenu("meubles")}>
-            <DropdownItem arrow="angle right">
+            <DropdownItem>
               Meubles
             </DropdownItem>
           </div>
           <div className="dropdownItem__List" onClick={() => setActiveMenu("luminaires")}>
-            <DropdownItem arrow="angle right">
+            <DropdownItem>
               Luminaires
             </DropdownItem>
           </div>
           <div className="dropdownItem__List" onClick={() => setActiveMenu("decorations")}>
-            <DropdownItem arrow="angle right">
+            <DropdownItem>
               Décorations
             </DropdownItem>
           </div>
@@ -84,7 +84,7 @@ const DropdownTest = ({ open, handleMenu }) => {
       >
         <div className="menu">
           <div onClick={() => setActiveMenu('main')}>
-            <DropdownItem arrow="angle right">Retour</DropdownItem>
+            <DropdownItem>Retour</DropdownItem>
           </div>
           <NavLink
             to="/meuble"
@@ -126,7 +126,7 @@ const DropdownTest = ({ open, handleMenu }) => {
       >
         <div className="menu">
           <div onClick={() => setActiveMenu('main')}>
-            <DropdownItem arrow="angle right">Retour</DropdownItem>
+            <DropdownItem>Retour</DropdownItem>
           </div>
           <NavLink
             to="/luminaires"
@@ -135,7 +135,7 @@ const DropdownTest = ({ open, handleMenu }) => {
             <DropdownItem><p onClick={handleMenu}>Tous les luminaires</p></DropdownItem>
           </NavLink>
           <DropdownItem> </DropdownItem>
-          <NavLink to="/applque-murale" exact>
+          <NavLink to="/applique-murale" exact>
             <DropdownItem><p onClick={handleMenu}>Applique murale</p></DropdownItem>
           </NavLink>
           <NavLink to="/lampadaire" exact>
@@ -159,7 +159,7 @@ const DropdownTest = ({ open, handleMenu }) => {
       >
         <div className="menu">
           <div onClick={() => setActiveMenu('main')}>
-            <DropdownItem arrow="angle right">Retour</DropdownItem>
+            <DropdownItem>Retour</DropdownItem>
           </div>
           <NavLink
             to="/decorations"

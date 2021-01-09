@@ -3,7 +3,8 @@
 .identity {
   // height: 100vh;
   // background-color: yellow;
-  margin-bottom: 50rem;
+  padding-top: 20rem;
+  margin-bottom: 30rem;
   height: 33vh;
   &__article {
     display: flex;
@@ -36,6 +37,7 @@
 @media (max-width: 650px) {
   .identity {
     margin-top: 20rem;
+    padding-bottom: 30rem;
     &__article {
       display: flex;
       flex-direction: column;
@@ -69,6 +71,7 @@
 @media (min-width: 650px) and (max-width: 850px) {
   .identity {
     margin-top: 20rem;
+    padding-bottom: 10rem;
     &__article {
       align-items: center;
       &__image {
@@ -90,6 +93,7 @@
 @media (min-width: 850px) and (max-width: 1024px) {
   .identity {
     margin-top: 20rem;
+    padding-bottom: 5rem;
     &__article {
       &__image {
         width: 40%;

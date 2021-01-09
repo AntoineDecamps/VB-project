@@ -35,9 +35,26 @@
   &__thirdSection__dimension__li {
     margin-top: 1rem;
   }
+  &__viewMoreButton {
+    color: vars.$main-color;
+    background-color: vars.$secondary-color;
+    border: 2px solid #746851;
+    padding: 1rem;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+    &:hover {
+      background-color: #4b4334;
+      color: vars.$secondary-color;
+    }
+  }
   &__thirdSection {
     margin: 2rem 1rem;
-    min-height: 350px;
+    min-height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -91,7 +108,8 @@
       
     }
     &__title {
-      font-size: 0.8rem;
+      font-size: 1rem;
+      text-transform: uppercase;
       color: rgba(255, 255, 255, 0.363);
     }
   }

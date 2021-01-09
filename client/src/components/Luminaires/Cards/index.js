@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
-const Cards = ({ name, date, category, hauteur, diametre, bois, description, image }) => (
+const Cards = ({ name, id, date, category, hauteur, diametre, bois, description, image }) => (
   <div className="cards">
     <section className="cards__firstSection">
       <img src={image} alt="" className="cards__image" />
@@ -13,7 +13,12 @@ const Cards = ({ name, date, category, hauteur, diametre, bois, description, ima
       <p className="cards__category">{category}</p>
     </section>
     <section className="cards__thirdSection">
-      <p className="cards__thirdSection__descriptif">{description}</p>
+      <div>
+        <p className="cards__thirdSection__descriptif">{description}</p>
+        <Link to={`/produit/luminaires/${id}`}>
+          <button type="button" className="cards__viewMoreButton">Voir plus</button>
+        </Link>
+      </div>
       <ul className="cards__dimension">
         <table className="cards__thirdSection__table">
           <tr key="array">

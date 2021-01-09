@@ -9,7 +9,7 @@ const Products = ({ product, name, redirectURL }) => {
   let cardToDisplay;
   if (product.length > 0) {
     cardToDisplay = () => {
-      const Card = product.map(({ titre, date, category, hauteur, longueur, largeur, diametre, bois, pied, description, image }) => (
+      const Card = product.map(({ titre, id, date, category, hauteur, longueur, largeur, diametre, bois, pied, description, image }) => (
         <Cards
           name={titre}
           date={date}
@@ -22,6 +22,7 @@ const Products = ({ product, name, redirectURL }) => {
           pied={pied}
           description={description}
           image={image}
+          id={id}
         />
       ));
       return (

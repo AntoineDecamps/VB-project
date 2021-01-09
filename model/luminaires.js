@@ -9,7 +9,10 @@ const luminairesSchema = new Schema({
     date: String,
     bois: String,
     description: String,
-    image: String
+    image: String,
+    image1: String,
+    image2: String,
+    image3: String
 });
 
 module.exports = mongoose.model('Luminaires', luminairesSchema);

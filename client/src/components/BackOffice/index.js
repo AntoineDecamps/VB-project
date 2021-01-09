@@ -6,12 +6,15 @@ import BackHomePage from 'src/components/BackOffice/BackHomePage';
 import Sidebar from 'src/components/BackOffice/Sidebar';
 import Meubles from 'src/components/BackOffice/Meubles';
 import Luminaires from 'src/components/BackOffice/Luminaires';
+import Decorations from 'src/components/BackOffice/Decorations';
 
 import AddMeuble from 'src/components/BackOffice/Meubles/AddMeuble';
 import AddLuminaire from 'src/components/BackOffice/Luminaires/AddLuminaire';
+import AddDecoration from 'src/components/BackOffice/Decorations/AddDecoration';
 
 import ModalMeuble from 'src/containers/ModalMeuble';
 import ModalLuminaire from 'src/containers/ModalLuminaire';
+import ModalDecoration from 'src/containers/ModalDecoration';
 
 import './styles.scss';
 
@@ -31,6 +34,7 @@ const BackOffice = ({ meubles, luminaires, decorations }) => (
           url="meuble"
         />
       </Route>
+      {/* Route affichage Luminaires */}
       <Route exact path="/admin/luminaires">
         <Sidebar />
         <Luminaires
@@ -39,6 +43,16 @@ const BackOffice = ({ meubles, luminaires, decorations }) => (
           url="luminaire"
         />
       </Route>
+      {/* Route affichage décorations */}
+      <Route exact path="/admin/decorations">
+        <Sidebar />
+        <Decorations
+          products={decorations}
+          name="decorations"
+          url="décoration"
+        />
+      </Route>
+
       <Route exact path="/admin/ajouter-meuble">
         <Sidebar />
         <AddMeuble />
@@ -46,6 +60,10 @@ const BackOffice = ({ meubles, luminaires, decorations }) => (
       <Route exact path="/admin/ajouter-luminaire">
         <Sidebar />
         <AddLuminaire />
+      </Route>
+      <Route exact path="/admin/ajouter-décoration">
+        <Sidebar />
+        <AddDecoration />
       </Route>
       <Route
         exact
@@ -61,6 +79,15 @@ const BackOffice = ({ meubles, luminaires, decorations }) => (
         path="/admin/luminaire/:slug"
         component={({ match }) => (
           <ModalLuminaire
+            slug={match.params.slug}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/admin/decoration/:slug"
+        component={({ match }) => (
+          <ModalDecoration
             slug={match.params.slug}
           />
         )}

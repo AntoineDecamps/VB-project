@@ -5,10 +5,10 @@ const { Schema } = mongoose;
 const decorationsSchema = new Schema({
     titre: String,
     category: String,
-    // hauteur: Number,
-    // diametre: Number,
+    hauteur: Number,
+    largeur: Number,
     date: String,
-    // bois: String,
+    bois: String,
     description: String,
     image: String
 });

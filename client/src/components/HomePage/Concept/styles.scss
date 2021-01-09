@@ -2,6 +2,10 @@
 
 /* General */
 .concept {
+  &__border {
+    background-color: #ece9e3c0;
+    border-radius: 15px;
+  }
   &__mainTitle {
     display: flex;
     flex-direction: column;
@@ -64,6 +68,14 @@
     &__mainText {
       font-size: 1.7rem;
     }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 375px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     &__mainImage {
       height: 40vh;
     }
@@ -91,9 +103,17 @@
     &__mainText {
       font-size: 1.8rem;    
     }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 600px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     &__mainImage {
       height: 600px;
-      width: 85%;
+      width: 95%;
       margin: auto;
     }
     &__logo {
@@ -107,7 +127,7 @@
         margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -116,7 +136,15 @@
 @media (min-width: 720px) and (max-width: 1024px) {
   .concept {
     &__mainText {
-      font-size: 2.4rem;    
+      font-size: 2rem;    
+    }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 700px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     &__mainImage {
       height: 600px;
@@ -134,7 +162,7 @@
         margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -143,11 +171,19 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
   .concept {
     &__mainText {
-      font-size: 2.4rem;    
+      font-size: 2rem;    
+    }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 800px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     &__mainImage {
       height: 600px;
-      width: 90%;
+      width: 95%;
       margin: auto;
     }
     &__logo {
@@ -170,7 +206,15 @@
 @media (min-width: 1200px) and (max-width: 1600px) {
   .concept {
     &__mainText {
-      font-size: 2.4rem;    
+      font-size: 2rem;    
+    }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 850px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     &__mainImage {
       height: 800px;
@@ -188,7 +232,7 @@
         margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -197,11 +241,19 @@
 @media (min-width: 1600px) {
   .concept {
     &__mainText {
-      font-size: 3rem;    
+      font-size: 2rem;    
+    }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 900px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     &__mainImage {
       height: 950px;
-      width: 90%;
+      width: 95%;
       margin: auto;
     }
     &__logo {
@@ -215,7 +267,43 @@
         margin-bottom: 1.5rem;
       }
       &__text {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//very big screen
+@media (min-width: 2000px) {
+  .concept {
+    &__mainText {
+      font-size: 2.3rem;    
+    }
+    &__border {
+      box-shadow: 1px 1px 3px vars.$secondary-color;
+      width: 1100px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__mainImage {
+      height: 1600px;
+      width: 95%;
+      margin: auto;
+    }
+    &__logo {
+      width: 20%;
+      padding-top: 15rem;
+    }
+    &__explanation {
+      margin: 0 30%;
+      &__title {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+      }
+      &__text {
+        font-size: 1.5rem;
       }
     }
   }

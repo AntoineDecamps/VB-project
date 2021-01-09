@@ -11,6 +11,9 @@ import Contact from 'src/components/Contact';
 import Products from 'src/components/Products';
 import Luminaires from 'src/components/Luminaires';
 import Decorations from 'src/components/Decorations';
+import MeubleDetail from 'src/containers/MeubleDetail';
+import LuminaireDetail from 'src/containers/LuminaireDetail';
+import DecorationDetail from 'src/containers/DecorationDetail';
 import BackOffice from 'src/components/BackOffice';
 import Footer from 'src/components/Footer';
 
@@ -256,6 +259,37 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
         />
         <Footer />
       </Route>
+      {/* Detail product */}
+      <Route
+        exact
+        path="/produit/meubles/:slug"
+        component={({ match }) => (
+          <MeubleDetail
+            slug={match.params.slug}
+            // product={match.params.product}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/produit/luminaires/:slug"
+        component={({ match }) => (
+          <LuminaireDetail
+            slug={match.params.slug}
+            // product={match.params.product}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/produit/decorations/:slug"
+        component={({ match }) => (
+          <DecorationDetail
+            slug={match.params.slug}
+            // product={match.params.product}
+          />
+        )}
+      />
       {/* BackOffice */}
       <BackOffice
         meubles={meubles}

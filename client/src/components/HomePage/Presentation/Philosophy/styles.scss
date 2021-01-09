@@ -3,7 +3,7 @@
 .philosophy {
   // height: 100vh;
   // background-color: yellow;
-  margin-bottom: 50rem;
+  margin-bottom: 10rem;
   height: 33vh;
   &__article {
     display: flex;
@@ -37,6 +37,7 @@
 @media (max-width: 650px) {
   .philosophy {
     margin-top: 20rem;
+    padding-bottom: 40rem;
     &__article {
       display: flex;
       flex-direction: column;
@@ -73,6 +74,7 @@
 @media (min-width: 650px) and (max-width: 850px) {
   .philosophy {
     margin-top: 20rem;
+    padding-bottom: 30rem;
     &__article {
       align-items: center;
       &__image {
@@ -94,6 +96,7 @@
 @media (min-width: 850px) and (max-width: 1024px) {
   .philosophy {
     margin-top: 20rem;
+    padding-bottom: 25rem;
     &__article {
       &__image {
         width: 40%;

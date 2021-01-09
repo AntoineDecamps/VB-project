@@ -122,15 +122,17 @@ const Concept = () => {
   }, []);
   return (
     <section className="concept">
-      <Parallax speed={2}>
+      <Parallax speed={3}>
         <div className="concept__mainTitle" ref={mainTitleRef}>
-          <h2 className="concept__mainText">Un homme, un savoir-faire.</h2>
-          <p className="concept__mainText">Benoit Van den Broeck, menuisier artisan.</p>
+          <div className="concept__border">
+            <h2 className="concept__mainText">Un homme, un savoir-faire.</h2>
+            <p className="concept__mainText">Benoit Van den Broeck, menuisier artisan.</p>
+          </div>
         </div>
       </Parallax>
       <div className="concept__mainImage">
         {/* <img src={mainImage} alt="mainImage" className="concept__mainImage" /> */}
-        <Parallax speed={1}>
+        <Parallax speed={3}>
           <img src={Logo} alt="logo" className="concept__logo" />
         </Parallax>
       </div>

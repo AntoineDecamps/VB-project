@@ -30,6 +30,9 @@ const ModalLuminaire = ({
   bois,
   description,
   image,
+  image1,
+  image2,
+  image3
 }) => {
   const validationSchema = Yup.object({
     titre: Yup.string().required('Veuillez entrer un nom pour ce produit'),
@@ -47,6 +50,9 @@ const ModalLuminaire = ({
       category,
       description,
       image,
+      image1,
+      image2,
+      image3,
       hauteur,
       diametre,
       date,
@@ -59,6 +65,9 @@ const ModalLuminaire = ({
         category: values.category,
         description: values.description,
         image: values.image,
+        image1: values.image1,
+        image2: values.image2,
+        image3: values.image3,
         hauteur: values.hauteur,
         diametre: values.diametre,
         date: values.date,
@@ -120,22 +129,37 @@ const ModalLuminaire = ({
             {formik.touched.image && formik.errors.image ? <div className="form__errors">{formik.errors.image}</div> : null}
           </label>
 
-          <label htmlFor="image" className="add__label">Hauteur
+          <label htmlFor="image1" className="add__label">Image Secondaire 1
+            <input type="text" placeholder="Veuillez entrer une url" id="image1" name="image1" className="add__input" onChange={formik.handleChange} value={formik.values.image1} onBlur={formik.handleBlur} />
+            {formik.touched.image1 && formik.errors.image1 ? <div className="form__errors">{formik.errors.image1}</div> : null}
+          </label>
+
+          <label htmlFor="image2" className="add__label">Image Secondaire 2
+            <input type="text" placeholder="Veuillez entrer une url" id="image2" name="image2" className="add__input" onChange={formik.handleChange} value={formik.values.image2} onBlur={formik.handleBlur} />
+            {formik.touched.image2 && formik.errors.image2 ? <div className="form__errors">{formik.errors.image2}</div> : null}
+          </label>
+
+          <label htmlFor="image3" className="add__label">Image Secondaire 3
+            <input type="text" placeholder="Veuillez entrer une url" id="image3" name="image3" className="add__input" onChange={formik.handleChange} value={formik.values.image3} onBlur={formik.handleBlur} />
+            {formik.touched.image3 && formik.errors.image3 ? <div className="form__errors">{formik.errors.image3}</div> : null}
+          </label>
+
+          <label htmlFor="hauteur" className="add__label">Hauteur
             <input type="text" placeholder="Veuillez entrer une hauteur" id="hauteur" name="hauteur" className="add__input" onChange={formik.handleChange} value={formik.values.hauteur} onBlur={formik.handleBlur} />
             {formik.touched.hauteur && formik.errors.hauteur ? <div className="form__errors">{formik.errors.hauteur}</div> : null}
           </label>
 
-          <label htmlFor="image" className="add__label">Diamètre
+          <label htmlFor="diametre" className="add__label">Diamètre
             <input type="text" placeholder="Veuillez entrer un diamètre à la place de largeur et longeur" id="diametre" name="diametre" className="add__input" onChange={formik.handleChange} value={formik.values.diametre} onBlur={formik.handleBlur} />
             {formik.touched.diametre && formik.errors.diametre ? <div className="form__errors">{formik.errors.diametre}</div> : null}
           </label>
 
-          <label htmlFor="image" className="add__label">Date de création
+          <label htmlFor="date" className="add__label">Date de création
             <input type="text" placeholder="Veuillez entrer une date de création" id="date" name="date" className="add__input" onChange={formik.handleChange} value={formik.values.date} onBlur={formik.handleBlur} />
             {formik.touched.date && formik.errors.date ? <div className="form__errors">{formik.errors.date}</div> : null}
           </label>
 
-          <label htmlFor="image" className="add__label">Pied
+          <label htmlFor="pied" className="add__label">Pied
             <input type="text" placeholder="Précisez le matériel utilisé pour le pied s'il y en a un" id="pied" name="pied" className="add__input" onChange={formik.handleChange} value={formik.values.pied} onBlur={formik.handleBlur} />
             {formik.touched.pied && formik.errors.pied ? <div className="form__errors">{formik.errors.pied}</div> : null}
           </label>

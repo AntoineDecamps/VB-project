@@ -44,7 +44,7 @@ const Header = () => {
       {isBigScreen && (
         <nav className="header__desktop">
           <div className="header__desktop__firstSection">
-            <p>Langue</p>
+            <p></p>
             <p>L'art du design, création de mobilier unique</p>
             <div className="header__desktop__socialMedia">
               <Icon name="instagram" size="large" />

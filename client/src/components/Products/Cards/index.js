@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
-const Cards = ({ name, date, category, hauteur, longueur, largeur, diametre, bois, pied, description, image }) => {
+const Cards = ({ name, id, date, category, hauteur, longueur, largeur, diametre, bois, pied, description, image }) => {
   let dimensionToDisplay;
   if (longueur === 'none') {
     dimensionToDisplay = () => (
@@ -51,7 +51,12 @@ const Cards = ({ name, date, category, hauteur, longueur, largeur, diametre, boi
         <p className="cards__category">{category}</p>
       </section>
       <section className="cards__thirdSection">
-        <p className="cards__thirdSection__descriptif">{description}</p>
+        <div>
+          <p className="cards__thirdSection__descriptif">{description}</p>
+          <Link to={`/produit/meubles/${id}`}>
+            <button type="button" className="cards__viewMoreButton">Voir plus</button>
+          </Link>
+        </div>
         <ul className="cards__thirdSection__dimension">
           {dimensionToDisplay()}
         </ul>

@@ -60,6 +60,18 @@ const Meubles = ({ products, name, url, open, openModal, closeModal }) => {
           <td>{product.image}</td>
         </tr>
         <tr>
+          <th>Image Secondaire 1</th>
+          <td>{product.image1}</td>
+        </tr>
+        <tr>
+          <th>Image Secondaire 2</th>
+          <td>{product.image2}</td>
+        </tr>
+        <tr>
+          <th>Image Secondaire 3</th>
+          <td>{product.image3}</td>
+        </tr>
+        <tr>
           <th>Modifier</th>
           <td className="displayProduct__table__lastChild">
             <Modal

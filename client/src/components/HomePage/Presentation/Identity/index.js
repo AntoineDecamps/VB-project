@@ -17,8 +17,8 @@ const Identity = () => {
       scrollTrigger: {
         trigger: textRef.current,
         markers: true,
-        start: 'top bottom',
-        end: 'bottom top',
+        start: 'top 85%',
+        end: 'bottom bottom',
         toggleActions: 'restart none none reset',
       },
     });

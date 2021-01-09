@@ -36,6 +36,7 @@
 @media (max-width: 650px) {
   .expertise {
     margin-top: 20rem;
+    padding-bottom: 40rem;
     &__article {
       display: flex;
       flex-direction: column;
@@ -71,7 +72,7 @@
 
 @media (min-width: 650px) and (max-width: 850px) {
   .expertise {
-    margin-top: 20rem;
+    padding-bottom: 30rem;
     &__article {
       align-items: center;
       &__image {
@@ -92,7 +93,7 @@
 
 @media (min-width: 850px) and (max-width: 1024px) {
   .expertise {
-    margin-top: 20rem;
+    // margin-top: 20rem;
     &__article {
       &__image {
         width: 40%;
@@ -111,7 +112,7 @@
 
 @media (min-width: 1024px) and (max-width: 1150px) {
   .expertise {
-    margin-top: 20rem;
+    // margin-top: 20rem;
     &__article {
       &__image {
         width: 30%;
@@ -130,7 +131,7 @@
 
 @media (min-width: 1150px) and (max-width: 1300px) {
   .expertise {
-    margin-top: 20rem;
+    // margin-top: 20rem;
     &__article {
       &__image {
         width: 25%;
@@ -149,7 +150,7 @@
 
 @media (min-width: 1300px) and (max-width: 1850px) {
   .expertise {
-    margin-top: 20rem;
+    // margin-top: 20rem;
     &__article {
       &__image {
         width: 20%;
@@ -168,7 +169,7 @@
 
 @media (min-width: 1850px)  {
   .expertise {
-    margin-top: 20rem;
+    // margin-top: 20rem;
     &__article {
       &__image {
         width: 20%;

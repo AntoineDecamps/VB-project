@@ -9,7 +9,7 @@ const Luminaires = ({ product, name, redirectURL }) => {
   let cardToDisplay;
   if (product.length > 0) {
     cardToDisplay = () => {
-      const Card = product.map(({ titre, date, category, hauteur, diametre, bois, description, image }) => (
+      const Card = product.map(({ titre, id, date, category, hauteur, diametre, bois, description, image }) => (
         <Cards
           name={titre}
           date={date}
@@ -19,6 +19,7 @@ const Luminaires = ({ product, name, redirectURL }) => {
           bois={bois}
           description={description}
           image={image}
+          id={id}
         />
       ));
       return (
