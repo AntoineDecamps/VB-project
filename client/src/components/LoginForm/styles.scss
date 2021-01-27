@@ -1,0 +1,121 @@
+@use 'src/styles/vars';
+
+.login {
+  background-color: #746851;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+
+}
+.login__title {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__h {
+    font-size: 1.8em;
+    color: vars.$secondary-color;
+    text-transform: uppercase;
+  }
+  &__image {
+    height: 50px;
+    width: 50px;
+  }
+}
+.login {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+    width: 40%;
+    margin: auto;
+  }
+  &__label {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    width: 100%;
+    color: black;
+  }
+  &__label select {
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+    color: #746851;
+    background-color: vars.$secondary-color;
+    border: 1px solid black;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid vars.$secondary-color;
+    background-color: transparent;
+    color: vars.$secondary-color;
+    &:focus {
+      background-color: vars.$secondary-color;
+      color: vars.$main-color;
+    }
+    &::placeholder {
+      color: vars.$secondary-color;
+      opacity: 0.8;
+    }
+    &__description {
+      height: 14rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: block;
+      width: 100%;
+      border: 2px solid vars.$secondary-color;
+      background-color: transparent;
+      color: vars.$secondary-color;
+      &:focus {
+        background-color: vars.$secondary-color;
+        color: vars.$main-color;
+      }
+      &::placeholder {
+        color: vars.$secondary-color;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__button {
+    color: vars.$main-color;
+    background-color: vars.$secondary-color;
+    border: 2px solid vars.$secondary-color;
+    padding: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+    &:hover {
+      background-color: vars.$secondary-color;
+      color: black;
+    }
+  }
+}
+
+.form__errors {
+  color: red;
+  font-size: 0.7em;
+  margin-top: 1rem;
+}
+
+
+.login {
+  &__button2 {
+    margin-top: 12rem;
+    color: vars.$secondary-color;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid vars.$secondary-color;
+    padding: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    &:hover {
+      background-color: vars.$secondary-color;
+      color: black;
+    }
+  }
+}

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 
 import BackHomePage from 'src/components/BackOffice/BackHomePage';
-import Sidebar from 'src/components/BackOffice/Sidebar';
+import LoginForm from 'src/containers/LoginForm';
+import Sidebar from 'src/containers/SideBar';
 import Meubles from 'src/components/BackOffice/Meubles';
 import Luminaires from 'src/components/BackOffice/Luminaires';
 import Decorations from 'src/components/BackOffice/Decorations';
@@ -18,39 +19,75 @@ import ModalDecoration from 'src/containers/ModalDecoration';
 
 import './styles.scss';
 
-const BackOffice = ({ meubles, luminaires, decorations }) => (
+const BackOffice = ({ meubles, luminaires, decorations, isLoged }) => (
   <div className="backOffice">
     <Switch>
       <Route exact path="/admin">
-        <BackHomePage />
-        <Sidebar />
+        {isLoged && (
+          <>
+            <BackHomePage />
+            <Sidebar />
+          </>
+        )}
+        {!isLoged && (
+          <>
+            <LoginForm />
+          </>
+        )}
       </Route>
       {/* Route affichage meubles */}
       <Route exact path="/admin/meubles">
-        <Sidebar />
-        <Meubles
-          products={meubles}
-          name="meubles"
-          url="meuble"
-        />
+        {isLoged && (
+          <>
+            <Sidebar />
+            <Meubles
+              products={meubles}
+              name="meubles"
+              url="meuble"
+            />
+          </>
+        )}
+        {!isLoged && (
+          <>
+            <LoginForm />
+          </>
+        )}
       </Route>
       {/* Route affichage Luminaires */}
       <Route exact path="/admin/luminaires">
-        <Sidebar />
-        <Luminaires
-          products={luminaires}
-          name="luminaires"
-          url="luminaire"
-        />
+        {isLoged && (
+          <>
+            <Sidebar />
+            <Luminaires
+              products={luminaires}
+              name="luminaires"
+              url="luminaire"
+            />
+          </>
+        )}
+        {!isLoged && (
+          <>
+            <LoginForm />
+          </>
+        )}
       </Route>
       {/* Route affichage décorations */}
       <Route exact path="/admin/decorations">
-        <Sidebar />
-        <Decorations
-          products={decorations}
-          name="decorations"
-          url="décoration"
-        />
+        {isLoged && (
+          <>
+            <Sidebar />
+            <Decorations
+              products={decorations}
+              name="decorations"
+              url="décoration"
+            />
+          </>
+        )}
+        {!isLoged && (
+          <>
+            <LoginForm />
+          </>
+        )}
       </Route>
 
       <Route exact path="/admin/ajouter-meuble">

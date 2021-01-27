@@ -8,12 +8,6 @@ import * as Yup from 'yup';
 import swal from 'sweetalert';
 
 const AddMeuble = () => {
-  // formik hook takes an object as parameter and return an object that we stock in a variable
-  // which contains usefull properties and methods that we can use on this form to :
-  // Managing the form state
-  // Handling form submission
-  // Validation and error messages
-  // properties stocked in the initialValues should correspond to attribute name of the input
   const validationSchema = Yup.object({
     titre: Yup.string().required('Veuillez entrer un nom pour ce produit'),
     category: Yup.string().required('Veuillez préciser la catégorie du produit'),

@@ -23,7 +23,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './styles.css';
 
 // == Composant
-const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLuminaires, getDecorations }) => {
+const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLuminaires, getDecorations, isLoged }) => {
   useEffect(() => {
     getMeubles();
     getLuminaires();
@@ -295,6 +295,7 @@ const App = ({ dropdown, meubles, luminaires, decorations, getMeubles, getLumina
         meubles={meubles}
         luminaires={luminaires}
         decorations={decorations}
+        isLoged={isLoged}
       />
       {/* </Switch> */}
     </div>

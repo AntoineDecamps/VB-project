@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import BurgerMenu from 'src/containers/BurgerMenu';
 import logo from 'src/assets/logo.png';
 import { Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
@@ -59,9 +60,11 @@ const Header = () => {
             <img src={logo} className="header__desktop__logo" alt="logo" ref={logoRef} />
             <div className="header__desktop__contact" ref={contactRef}>
               <p className="header__desktop__contact__left">Vous voulez plus d'informations ?</p>
-              <div className="header__box__right">
-                <p className="header__desktop__contact__right">Me contacter</p>
-              </div>
+              <Link to="/contact">
+                <div className="header__box__right">
+                  <p className="header__desktop__contact__right">Me contacter</p>
+                </div>
+              </Link>
             </div>
           </div>
         </nav>

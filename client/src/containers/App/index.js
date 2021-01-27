@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
   meubles: state.meubles.meublesList,
   luminaires: state.luminaires.luminairesList,
   decorations: state.decorations.decorationsList,
+  isLoged: state.login.isLoged,
 });
 
 const mapDispatchToProps = (dispatch) => ({

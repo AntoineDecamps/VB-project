@@ -56,7 +56,12 @@ const DropdownTest = ({ open, handleMenu }) => {
           >
             <DropdownItem arrow=""><p onClick={handleMenu}>Accueil</p></DropdownItem>
           </NavLink>
-          <DropdownItem>Contact</DropdownItem>
+          <NavLink
+            to="/contact"
+            exact
+          >
+            <DropdownItem><p onClick={handleMenu}>Contact</p></DropdownItem>
+          </NavLink>
           <div className="dropdownItem__List" onClick={() => setActiveMenu("meubles")}>
             <DropdownItem>
               Meubles

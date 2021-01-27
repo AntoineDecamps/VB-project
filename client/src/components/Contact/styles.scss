@@ -1,1 +1,118 @@
 @use 'src/styles/vars';
+
+.contact {
+  width: 40%;
+  padding-top: 2rem;
+  margin: auto;
+  background-color: vars.$main-color;
+  &__title {
+    font-family: 'MirageThin', sans-serif;
+    border-bottom: 0.7px solid black;
+    display: inline-block;
+  }
+  &__p {
+    font-family: 'MirageRegular', sans-serif;
+    font-size: 1.2rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    &__input {
+      margin-top: 2rem;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: vars.$main-color;
+      padding-bottom: 0.5rem;
+      font-family: 'MirageRegular', sans-serif;
+      font-size: 1.2rem;
+      &__message {
+        height: 200px;
+        background-color: vars.$main-color;
+        margin-top: 2rem;
+        border: none;
+        border-bottom: 1px solid black;
+        padding-bottom: 0.5rem;
+        font-family: 'MirageRegular', sans-serif;
+        font-size: 1.2rem;
+      }
+    }
+    &__button {
+      margin-top: 4rem;
+      border: 1px solid black;
+      padding: 1rem;
+      text-align: center;
+      background-color: vars.$main-color;
+      cursor: pointer;
+      font-family: 'MirageRegular', sans-serif;
+      font-size: 1.5rem;
+    }
+    &__button:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+// Mobile version
+@media (max-width: 560px) {
+  .contact {
+    width: 90%;
+  }
+}
+
+
+@media (min-width: 560px) and (max-width: 720px) {
+  .contact {
+    width: 90%;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 850px) {
+  .contact {
+    width: 80%;
+    &__p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+  .contact {
+    width: 70%;
+    &__p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .contact {
+    width: 65%;
+    &__p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .contact {
+    width: 60%;
+    &__p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+//very big screen
+@media (min-width: 2000px) {
+  .contact {
+    width: 50%;
+    &__title {
+
+    }
+    &__p {
+      font-size: 1.3rem;
+    }
+  }
+}

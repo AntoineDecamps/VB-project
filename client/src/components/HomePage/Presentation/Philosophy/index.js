@@ -16,7 +16,7 @@ const Philosophy = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: textRef.current,
-        markers: true,
+        // markers: true,
         start: 'top 85%',
         end: 'bottom bottom',
         toggleActions: 'restart none none reset',

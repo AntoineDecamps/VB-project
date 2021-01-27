@@ -6,6 +6,7 @@ import luminaires from './luminaires';
 import decorations from './decorations';
 import edit from './edit';
 import modal from './modal';
+import login from './login';
 
 export default combineReducers({
   burgerMenu,
@@ -15,4 +16,5 @@ export default combineReducers({
   decorations,
   edit,
   modal,
+  login,
 });

@@ -9,6 +9,10 @@ export const redirectToDecorations = () => {
   document.location.href = '/admin/decorations';
 };
 
+export const redirectToHomepage = () => {
+  document.location.href = '/';
+};
+
 export const getProductBySlug = (productList, slug) => productList.find(
   (product) => product.id === slug,
 );

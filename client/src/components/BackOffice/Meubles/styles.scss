@@ -5,6 +5,7 @@
   background-color: #746851;
   &__flexButton {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     padding-top: 4rem;
     padding-right: 6rem;
@@ -25,11 +26,11 @@
   }
   &__title {
     font-size: 1.5em;
-    min-width: 250px;
+    // min-width: 250px;
     color: vars.$main-color;
     text-transform: uppercase;
-    align-self: left;
-    margin-right: 58rem;
+    align-self: right;
+    // margin-right: 58rem;
   }
 }
 
@@ -133,4 +134,109 @@
 }
 button.ui.blue.button {
   margin-left: 33rem;
+}
+
+
+
+@media (max-width: 1700px) {
+  .displayProduct {
+    width: 450px;
+    &__div {
+      align-self: start;
+      margin-top: 1rem;
+    }
+    &__image {
+      height: 450px;
+      width: 450px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      margin-right: 3rem;
+    }
+    &__table {
+      width: 700px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .displayProduct {
+    width: 450px;
+    &__div {
+      align-self: start;
+      margin-top: 1rem;
+    }
+    &__image {
+      height: 450px;
+      width: 450px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      margin-right: 3rem;
+    }
+    &__table {
+      width: 600px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .displayProduct {
+    width: 350px;
+    &__div {
+      align-self: start;
+      margin-top: 1rem;
+    }
+    &__image {
+      height: 350px;
+      width: 350px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      margin-right: 3rem;
+    }
+    &__table {
+      width: 600px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1364px) {
+  .displayProduct {
+    width: 350px;
+    &__div {
+      align-self: start;
+      margin-top: 1rem;
+    }
+    &__image {
+      height: 300px;
+      width: 300px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      margin-right: 3rem;
+    }
+    &__table {
+      width: 550px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .displayProduct {
+    width: 350px;
+    margin-bottom: 60rem;
+    display: flex;
+    flex-direction: column;
+    &__div {
+      align-self: start;
+      margin-top: 1rem;
+    }
+    &__image {
+      height: 450px;
+      width: 450px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      margin-right: 3rem;
+    }
+    &__table {
+      width: 650px;
+      height: 200px;
+    }
+  }
 }
