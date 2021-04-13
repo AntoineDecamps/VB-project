@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-// const dbMiddleware = require('./middlewares/mongodb.js');
+const dbMiddleware = require('./middlewares/mongodb.js');
 
 
 const authRouter = require('./routes/auth.js');
@@ -15,7 +15,10 @@ const decorationsRouter = require('./routes/decorations.js');
 const decorationRouter = require('./routes/decoration.js');
 
 const app = express();
-const port = 5050;
+let port = process.env.PORT;
+if (port === null || port == "") {
+    port = 8080;
+};
 
 app.use(bodyParser.json());
 app.use(dbMiddleware);
@@ -44,6 +47,6 @@ app.use(decorationsRouter);
 app.use(decorationRouter);
 
 app.listen(port, () => {
-    console.log(`Server connecté sur le port localhost://${port}`);
+    console.log(`Server connecté sur le port ${port}`);
 })
 
