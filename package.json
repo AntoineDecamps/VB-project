@@ -25,7 +25,6 @@
     "chai": "*",
     "clean-webpack-plugin": "*",
     "copy-webpack-plugin": "*",
-    "cross-env": "^7.0.3",
     "css-loader": "*",
     "cssnano": "*",
     "enzyme": "*",
@@ -58,6 +57,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "axios": "^0.21.0",
+    "cross-env": "^7.0.3",
     "formik": "^2.2.6",
     "gsap": "^3.5.1",
     "prop-types": "*",
