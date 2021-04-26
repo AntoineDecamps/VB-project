@@ -24,7 +24,7 @@
     "chai": "*",
     "clean-webpack-plugin": "*",
     "copy-webpack-plugin": "*",
-    "cross-env": "*",
+    "cross-env": "^7.0.3",
     "css-loader": "*",
     "cssnano": "*",
     "enzyme": "*",
@@ -67,12 +67,10 @@
     "react-rellax": "^1.0.3",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
-
     "react-transition-group": "^4.4.1",
     "redux": "*",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0",
-
     "styled-components": "*",
     "swal": "^0.1.0",
     "sweetalert": "^2.1.2",
