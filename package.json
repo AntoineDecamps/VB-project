@@ -10,7 +10,7 @@
     "test": "cross-env NODE_PATH=./ mocha --require tests/.setup.js tests/**/*.test.js",
     "test:watch": "cross-env NODE_PATH=./ mocha --watch --require tests/.setup.js tests/**/*.test.js",
     "save-deps": "node updateDeps.js",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "webpack -p --config ./config/webpack.prod.js --progress"
   },
   "devDependencies": {
     "@babel/core": "*",
