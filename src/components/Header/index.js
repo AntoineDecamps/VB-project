@@ -59,7 +59,7 @@ const Header = () => {
             </div>
             <img src={logo} className="header__desktop__logo" alt="logo" ref={logoRef} />
             <div className="header__desktop__contact" ref={contactRef}>
-              <p className="header__desktop__contact__left">Vous voulez plus d'informations ?</p>
+              <p className="header__desktop__contact__left">Plus d'informations ?</p>
               <Link to="/contact">
                 <div className="header__box__right">
                   <p className="header__desktop__contact__right">Me contacter</p>

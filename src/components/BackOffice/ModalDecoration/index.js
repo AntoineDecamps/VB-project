@@ -56,7 +56,7 @@ const ModalDecoration = ({
     },
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.patch(`http://localhost:5050/api/decoration/${id}`, {
+      axios.patch(`https://vb-creation-api.herokuapp.com/api/decoration/${id}`, {
         titre: values.titre,
         category: values.category,
         description: values.description,
@@ -72,7 +72,7 @@ const ModalDecoration = ({
         },
       })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           redirectToDecorations();

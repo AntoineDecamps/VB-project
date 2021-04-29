@@ -23,7 +23,7 @@ const Contact = () => {
     },
     // eslint-disable-next-line max-len
     onSubmit: (values) => {
-      axios.post('http://localhost:5050/contact',
+      axios.post('https://vb-creation-api.herokuapp.com/contact',
         {
           name: values.name,
           email: values.email,
@@ -35,7 +35,7 @@ const Contact = () => {
           },
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           swal('Votre message bien été envoyé !', '', 'success');
@@ -53,7 +53,7 @@ const Contact = () => {
   console.log('Form errors', formik.errors);
   return (
     <div className="contact">
-      <h1 className="contact__title">Contactez moi !</h1>
+      <p className="contact__title">Contactez moi !</p>
       <p className="contact__p">Pour toutes questions relatives à une création présente sur le site ou si vous souhaitez faire appel à mes services pour un projet sur-mesure, n'hésitez pas à me contacter ! </p>
       <form className="contact__form" onSubmit={formik.handleSubmit}>
         <input type="text" placeholder="Nom" id="name" name="name" className="contact__form__input" onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur} />

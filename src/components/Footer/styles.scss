@@ -8,6 +8,7 @@
   background-color: #1C1C1C;
   &__top {
     display: flex;
+    justify-content: space-around;
     &__left {
       display: flex;
       flex-direction: column;
@@ -20,26 +21,35 @@
   }
   &__info {
     display: flex;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     &__p {
       padding-left: 1rem;
     }
   }
   &__menu {
     margin-top: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
     
     &__list {
       line-height: 2;
       color: rgba(255, 255, 255, 0.719);
       font-family: 'MirageThin';
       font-size: 1.1rem;
+      text-align: center;
       &__main {
+        font-size: 1.3rem;
+        color: white;
+        margin-bottom: 0.5rem;
+        // display: inline-block;
+        font-family: 'MirageRegular';  
+      }
+      &__accueil {
         font-size: 1.2rem;
         color: white;
         margin-bottom: 1rem;
         display: inline-block;
-        font-family: 'MirageRegular';
+        font-family: 'MirageRegular';  
+        align-self: flex-end;
       }
     }
   }
@@ -49,8 +59,10 @@
     border-top: 1px solid black;
     display: flex;
     justify-content: space-around;
+    align-items: flex-end;
     &__center {
-      margin-right: 3.5rem;
+      margin-right: 5.5rem;
+      
     }
     &__right {
       display: flex;
@@ -74,9 +86,30 @@
     font-size: 0.8rem;
   }
   &__bigScreen {
+    margin-right: 6rem;
     display: flex;
     justify-content: space-between;
   }
+}
+
+
+.footer__box {
+  &__right {
+    height: 50px;
+    width: 130px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    background-color: #16a085;
+    margin-top: 3rem;
+  }
+}
+
+.footer__topRight {
+  margin-top: 18rem;
 }
 
 // Mobile version
@@ -95,7 +128,7 @@
     &__logo {
       height: 130px;
       width: 130px;
-      margin: 2rem;
+      margin: 2rem 2rem 2rem 0rem;
     }
     &__menu {
       margin-top: 2rem;

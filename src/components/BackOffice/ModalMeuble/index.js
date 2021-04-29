@@ -66,7 +66,7 @@ const ModalMeuble = ({
     },
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.patch(`http://localhost:5050/api/meuble/${id}`, {
+      axios.patch(`https://vb-creation-api.herokuapp.com/api/meuble/${id}`, {
         titre: values.titre,
         category: values.category,
         description: values.description,
@@ -88,7 +88,7 @@ const ModalMeuble = ({
         },
       })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           redirectToMeubles();

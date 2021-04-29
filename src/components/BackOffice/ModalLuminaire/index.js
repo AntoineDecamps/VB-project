@@ -60,7 +60,7 @@ const ModalLuminaire = ({
     },
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.patch(`http://localhost:5050/api/luminaire/${id}`, {
+      axios.patch(`https://vb-creation-api.herokuapp.com/api/luminaire/${id}`, {
         titre: values.titre,
         category: values.category,
         description: values.description,
@@ -79,7 +79,7 @@ const ModalLuminaire = ({
         },
       })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           redirectToLumainaires();

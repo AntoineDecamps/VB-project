@@ -53,11 +53,36 @@ const Footer = () => {
       {isBigScreen && (
         <div className="footer">
           <div className="footer__top">
-            <img src={logo} alt="" className="footer__logo" />
+            <div className="footer__top__left">
+              <img src={logo} alt="" className="footer__logo" />
+              <div className="footer__socialMedia">
+                <Icon name="instagram" size="big" />
+                <Icon name="pinterest p" size="big" />
+              </div>
+            </div>
+
             <div className="footer__bigScreen">
+
+              <ul className="footer__menu">
+                <NavLink to="/luminaires">
+                  <li className="footer__menu__list footer__menu__list__main">Luminaires</li>
+                </NavLink>
+                <NavLink to="/applique-murale">
+                  <li className="footer__menu__list">Applique murale</li>
+                </NavLink>
+                <NavLink to="/lampadaire">
+                  <li className="footer__menu__list">Lampadaire</li>
+                </NavLink>
+                <NavLink to="/lampe-de-table">
+                  <li className="footer__menu__list">Lampe de table</li>
+                </NavLink>
+                <NavLink to="/suspension">
+                  <li className="footer__menu__list">Suspension</li>
+                </NavLink>
+              </ul>
               <ul className="footer__menu">
                 <NavLink to="/meuble">
-                  <li className="footer__menu__list__main">Meubles</li>
+                  <li className="footer__menu__list footer__menu__list__main">Meubles</li>
                 </NavLink>
                 <NavLink to="/banc">
                   <li className="footer__menu__list">Banc</li>
@@ -82,25 +107,8 @@ const Footer = () => {
                 </NavLink>
               </ul>
               <ul className="footer__menu">
-                <NavLink to="/luminaires">
-                  <li className="footer__menu__list__main">Luminaires</li>
-                </NavLink>
-                <NavLink to="/applique-murale">
-                  <li className="footer__menu__list">Applique murale</li>
-                </NavLink>
-                <NavLink to="/lampadaire">
-                  <li className="footer__menu__list">Lampadaire</li>
-                </NavLink>
-                <NavLink to="/lampe-de-table">
-                  <li className="footer__menu__list">Lampe de table</li>
-                </NavLink>
-                <NavLink to="/suspension">
-                  <li className="footer__menu__list">Suspension</li>
-                </NavLink>
-              </ul>
-              <ul className="footer__menu">
                 <NavLink to="/decorations">
-                  <li className="footer__menu__list__main">Décorations</li>
+                  <li className="footer__menu__list footer__menu__list__main">Décorations</li>
                 </NavLink>
                 <NavLink to="/miroire">
                   <li className="footer__menu__list">Miroire</li>
@@ -109,6 +117,13 @@ const Footer = () => {
                   <li className="footer__menu__list">Cadre</li>
                 </NavLink>
               </ul>
+            </div>
+
+            <div className="footer__topRight">
+              <NavLink to="/">
+                <li className="footer__menu__list__accueil">Retour à l'accueil</li>
+              </NavLink>
+
             </div>
           </div>
           <div className="footer__bottom">
@@ -126,20 +141,15 @@ const Footer = () => {
               <p>&copy;    VB CREATION- Tous    droits    réservés</p>
             </div>
             <div className="footer__bottom__right">
-              <NavLink to="/">
-                <li className="footer__menu__list__main">Retour à l'accueil</li>
-              </NavLink>
+
               <NavLink to="/contact">
-                <div className="header__box__right">
+                <div className="footer__box__right">
                   <p className="header__desktop__contact__right">Me contacter</p>
                 </div>
               </NavLink>
             </div>
           </div>
-          <div className="footer__socialMedia">
-            <Icon name="instagram" size="big" />
-            <Icon name="pinterest p" size="big" />
-          </div>
+
         </div>
       )}
       <div className="footer__copyright">

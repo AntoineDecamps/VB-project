@@ -35,7 +35,7 @@ const AddLuminaire = () => {
     // eslint-disable-next-line max-len
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.post('http://localhost:5050/api/luminaire',
+      axios.post('https://vb-creation-api.herokuapp.com/api/luminaire',
         {
           titre: values.titre,
           category: values.category,
@@ -55,7 +55,7 @@ const AddLuminaire = () => {
           },
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           redirectToLumainaires();

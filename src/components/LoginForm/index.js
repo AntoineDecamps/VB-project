@@ -21,7 +21,7 @@ const LoginForm = ({ handleLogin }) => {
     // eslint-disable-next-line max-len
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.post('http://localhost:5050/api/login',
+      axios.post('https://vb-creation-api.herokuapp.com/api/login',
         {
           email: values.email,
           password: values.password,
@@ -31,7 +31,7 @@ const LoginForm = ({ handleLogin }) => {
           },
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           handleLogin();

@@ -41,7 +41,7 @@ const AddMeuble = () => {
     // eslint-disable-next-line max-len
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.post('http://localhost:5050/api/meuble',
+      axios.post('https://vb-creation-api.herokuapp.com/api/meuble',
         {
           titre: values.titre,
           category: values.category,
@@ -64,7 +64,7 @@ const AddMeuble = () => {
           },
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           redirectToMeubles();

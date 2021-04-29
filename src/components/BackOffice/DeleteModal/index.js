@@ -10,14 +10,14 @@ import './styles.scss';
 const DeleteModal = ({ open, openDelete, closeDelete, id, apiURL, redirect, getMeubles, getLuminaires, getDecorations }) => {
   const handleDelete = () => {
     // const token = localStorage.getItem('token');
-    axios.delete(`http://localhost:5050/api/${apiURL}/${id}`, {
+    axios.delete(`https://vb-creation-api.herokuapp.com/api/${apiURL}/${id}`, {
       headers: {
         // 'X-Auth-Token': token,
         'content-type': 'application/json',
       },
     })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       })
       .then(() => {
         if (apiURL === 'meuble') {

@@ -32,7 +32,7 @@ const AddDecoration = () => {
     // eslint-disable-next-line max-len
     onSubmit: (values) => {
       // const token = localStorage.getItem('token');
-      axios.post('http://localhost:5050/api/decoration',
+      axios.post('https://vb-creation-api.herokuapp.com/api/decoration',
         {
           titre: values.titre,
           category: values.category,
@@ -49,7 +49,7 @@ const AddDecoration = () => {
           },
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
         })
         .then(() => {
           redirectToDecorations();
