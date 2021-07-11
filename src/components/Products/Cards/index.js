@@ -52,7 +52,7 @@ const Cards = ({ name, id, date, category, hauteur, longueur, largeur, diametre,
       </section>
       <section className="cards__thirdSection">
         <div>
-          <p className="cards__thirdSection__descriptif">{description}</p>
+          
           <Link to={`/produit/meubles/${id}`}>
             <button type="button" className="cards__viewMoreButton">Voir plus</button>
           </Link>
@@ -61,6 +61,7 @@ const Cards = ({ name, id, date, category, hauteur, longueur, largeur, diametre,
           {dimensionToDisplay()}
         </ul>
       </section>
+      <p className="cards__thirdSection__descriptif">{description}</p>
       <section className="cards__fourthSection">
         <div className="cards__fourthSection__div">
           <p className="cards__fourthSection__title">création</p>
@@ -74,6 +75,7 @@ const Cards = ({ name, id, date, category, hauteur, longueur, largeur, diametre,
           <p className="cards__fourthSection__title">pied</p>
           <p className="cards__fourthSection__data">{pied}</p>
         </div>
+        
       </section>
     </div>
   );

@@ -34,8 +34,11 @@ const Philosophy = () => {
         <div className="philosophy__article__text" ref={textRef}>
           <h3 className="philosophy__article__title">Ma philosophie</h3>
           <p className="philosophy__article__p">
-            Ma philosphie Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias unde officia distinctio reprehenderit ab quod nam delectus nobis deleniti dolores adipisci nemo aspernatur cum, et, sint voluptatem temporibus officiis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla praesentium ad eligendi tempora modi a voluptate odio doloremque architecto eos voluptatibus sequi fugit dolor sit amet consectetur adipisicing elit. Nulla praesentium ad eligendi tempora modi a voluptate odio doloremque architecto eos voluptatibus sequi fugit
+            En travaillant des matériaux de récupération et naturels, Benoit imagine et fabrique des mobiliers et luminaires aux lignes audacieuses.
+            <br></br>
+            <br></br> Les essences de bois utilisées sont locales et de récupération sur des anciens mobiliers de chantier afin d’avoir un minimum d’impact sur l’environnement. Il incorpore dans ses créations des objets usuels qui non plus d’utilité pour leur rende une seconde vie.
+            <br></br>
+            <br></br> Pour tout projet de décoration, Benoit fabrique des meubles sur mesure, des pièces uniques ou en petite série dans un style contemporain et industriel avec comme valeur principale, le respect de l'environnement.
           </p>
         </div>
         <img src={philosophy} alt="" className="philosophy__article__image" ref={imageRef} />

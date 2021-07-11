@@ -35,8 +35,11 @@ const Identity = () => {
         <div className="identity__article__text" ref={textRef}>
           <h3 className="identity__article__title">Qui suis-je ?</h3>
           <p className="identity__article__p">
-            Menuisier et artisan depuis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias unde officia distinctio reprehenderit ab quod nam delectus nobis deleniti dolores adipisci nemo aspernatur cum, et, sint voluptatem temporibus officiis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla praesentium ad eligendi tempora modi a voluptate odio doloremque architecto eos voluptatibus sequi fugit dolor sit amet consectetur adipisicing elit. Nulla praesentium ad eligendi tempora modi a voluptate odio doloremque architecto eos voluptatibus sequi fugit
+            Après une formation en menuiserie, Benoit exerce son métier au sein de la Défense, très vite, il se consacre à sa vocation première : la création.
+            <br></br>
+            <br></br> Il commence par réaliser des luminaires contemporains à partir de matériaux recyclés ou au travers d’objets utilitaires déclassés auxquels il donne une nouvelle vie. 
+            <br></br>
+            <br></br> Aujourd’hui, Benoit franchit un cap en créant sa société VB Design Conception et se lance dans la production de mobiliers, appliques lumineuses et luminaires.
           </p>
         </div>
       </article>

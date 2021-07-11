@@ -35,7 +35,13 @@ const Expertise = () => {
         <div className="expertise__article__text" ref={textRef}>
           <h3 className="expertise__article__title">Mon expertise</h3>
           <p className="expertise__article__p">
-            Mon domaine d'expertise s'étend à toutes sortes de meubles aussi bien d'intérieurs que d'extérieurs, aux luminaires ainsi qu'à certains types de décorations d'intérieures comme les miroirs.
+            Vous trouverez des pièces uniques réalisées avec un maximum de matériaux de récupération pour rester dans une philosophie écologique allant du meuble d'intérieur comme d'extérieur, aux luminaires jusqu'à certains types de décorations d'intérieures comme les miroirs.
+            <br></br>
+            <br></br>
+            Toujours en collaboration avec les clients pour que les pièces leur ressemblent aux maximum et que celles-ci s’intègrent au mieux dans leur habitat.
+            <br></br>
+            <br></br>
+            N’hésitez pas à nous contacter pour réaliser un projet qui prendra une place de choix dans votre intérieur !
           </p>
         </div>
       </article>
