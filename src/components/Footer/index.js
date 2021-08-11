@@ -130,11 +130,11 @@ const Footer = () => {
             <div className="footer__bottom__left">
               <div className="footer__info">
                 <Icon name="mail" size="large" />
-                <p className="footer__info__p">van.den.broeck.b@hotmail.com</p>
+                <p className="footer__info__p">vb-design-conception@hotmail.com</p>
               </div>
               <div className="footer__info">
                 <Icon name="phone" size="large" />
-                <p className="footer__info__p">0625  85 95 96 95</p>
+                <p className="footer__info__p">0494 94 96 07</p>
               </div>
             </div>
             <div className="footer__bottom__center">
