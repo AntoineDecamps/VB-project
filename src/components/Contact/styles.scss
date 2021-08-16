@@ -13,6 +13,20 @@
     font-weight: bold;
     margin-bottom: 1rem;
   }
+  &__message {
+    margin: 2rem;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    &__p {
+      margin: 2rem 2rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    &__email {
+      font-weight: bold;
+    }
+  }
   &__p {
     font-family: 'MirageRegular', sans-serif;
     font-size: 1.2rem;

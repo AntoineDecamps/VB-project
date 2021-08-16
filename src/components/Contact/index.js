@@ -55,6 +55,19 @@ const Contact = () => {
     <div className="contact">
       <p className="contact__title">Contactez moi !</p>
       <p className="contact__p">Pour toutes questions relatives à une création présente sur le site ou si vous souhaitez faire appel à mes services pour un projet sur-mesure, n'hésitez pas à me contacter ! </p>
+      <div className="contact__message">
+        <p className="contact__message__p">
+          Important : ce formulaire ne fonctionne pas pour le moment !
+        </p>
+        <p className="contact__message__p">
+          Si Vous souhaitez prendre contact, veuillez envoyer un email à l'adresse suivante : 
+          <br /> <span className="contact__message__email">
+            vb-design-conception@hotmail.com 
+          </span> 
+          <br /> sans passer par ce formulaire s'il-vous-plait ! 
+
+        </p>
+      </div>
       <form className="contact__form" onSubmit={formik.handleSubmit}>
         <input type="text" placeholder="Nom" id="name" name="name" className="contact__form__input" onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur} />
         {formik.touched.name && formik.errors.name ? <div className="form__errors">{formik.errors.name}</div> : null}
