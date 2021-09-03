@@ -174,7 +174,7 @@ const DropdownTest = ({ open, handleMenu }) => {
           </NavLink>
           <DropdownItem> </DropdownItem>
           <NavLink to="/miroire" exact>
-            <DropdownItem><p onClick={handleMenu}>Miroire</p></DropdownItem>
+            <DropdownItem><p onClick={handleMenu}>Miroir</p></DropdownItem>
           </NavLink>
           <NavLink to="/cadre" exact>
             <DropdownItem><p onClick={handleMenu}>Cadre</p></DropdownItem>
